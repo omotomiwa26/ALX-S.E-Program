@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+
+    <title>Learning the shell - Lesson 3: Looking around</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="In this tutorial, we look at the directories found in a Linux system and examine their contents">
+    <meta name="keywords" content="linux, shell, directories, less command, file command, determining file contents, ls, text, file, command options, command arguments, /usr, /etc, /usr/bin, /home">
+    <meta name="author" content="William Shotts, Jr.">
+    <meta name="copyright" content="Copyright 2000-2023, William Shotts, Jr.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="http://linuxcommand.org/favicon.png">
+    <link rel="stylesheet" type="text/css" href="Learning%20the%20shell%20-%20Lesson%203%20Looking%20around_files/linuxcommand5.css">
+    <link rel="prev" href="http://linuxcommand.org/lc3_lts0020.php">
+    <link rel="next" href="http://linuxcommand.org/lc3_lts0040.php">
+    <link rel="contents" href="http://linuxcommand.org/lc3_learning_the_shell.php#contents">
+    </head>
+
+    <body>
+
+    <div class="grid-container">
+    <div class="colorblock-red">
+    </div><!-- colorblock-red -->
+    <div class="title-img">
+    </div><!-- title-img -->
+    <div class="colorblock-white">
+    <div class="navbar">
+      <ul style="line-height: 150%;">
+        <li><a href="http://linuxcommand.org/index.php">Home</a></li>
+        <li><a href="http://linuxcommand.org/lc3_learning_the_shell.php">Learning&nbsp;the&nbsp;Shell</a></li>
+        <li><a href="http://linuxcommand.org/lc3_writing_shell_scripts.php">Writing&nbsp;Shell&nbsp;Scripts</a></li>
+        <li><a href="http://linuxcommand.org/lc3_resources.php">Resources</a></li>
+        <li><a href="http://linuxcommand.org/tlcl.php">Books</a></li>
+        <li><a href="http://linuxcommand.org/lc3_adventures.php">Adventures</a></li>
+      </ul>
+      <hr>
+      <ul>
+        <li><a href="https://lcorg.blogspot.com/">Blog</a></li>
+      </ul>
+    </div><!-- navbar -->
+  
+    </div><!-- colorblock-white -->
+
+    <div id="top" class="main">
+    <div class="pagenav">
+      <div class="homebutton">
+      <a href="http://linuxcommand.org/index.php">Home</a> |
+      </div>
+      <a href="http://linuxcommand.org/lc3_lts0020.php">Previous</a> | <a href="http://linuxcommand.org/lc3_learning_the_shell.php#contents">Contents</a> | <a href="http://linuxcommand.org/lc3_lts0040.php">Next</a>
+    </div>
+<h1>Looking Around</h1>
+
+<p>Now that we know how to move from working directory to working directory,
+we're going to take a tour of our Linux system and, along the way, learn some
+things about what makes it tick. But before we begin, we have to learn about
+some tools that will come in handy during our journey. These are:</p>
+
+<ul>
+<li><code class="user"><a href="http://linuxcommand.org/lc3_man_pages/ls1.html">ls</a></code> (list files and directories)</li>
+<li><code class="user"><a href="http://linuxcommand.org/lc3_man_pages/less1.html">less</a></code> (view text files)</li>
+<li><code class="user"><a href="http://linuxcommand.org/lc3_man_pages/file1.html">file</a></code> (classify a file's contents)</li>
+</ul>
+
+<h2>ls</h2>
+
+<p>The <code class="user">ls</code> command is used to
+list the contents of a directory. It is probably
+the most commonly used Linux command. It can be
+used in a number of different ways. Here are some
+examples:<br>
+<br>
+</p>
+
+<div style="overflow-x: auto"><table>
+  <caption>Examples of the ls command</caption>
+
+  <tbody><tr>
+    <th><strong>Command</strong></th>
+    <th><strong>Result</strong></th>
+  </tr>
+
+  <tr>
+    <td><code class="user">ls</code></td>
+    <td>List the files in the working directory</td>
+  </tr>
+
+  <tr>
+    <td><code class="user">ls /bin</code></td>
+
+    <td>List the files in the <code>/bin</code> directory (or
+    any other directory we care to specify)</td>
+  </tr>
+
+  <tr>
+    <td><code class="user">ls -l</code></td>
+    <td>List the files in the working directory in long format</td>
+  </tr>
+
+  <tr>
+    <td><span style="white-space: nowrap"><code class="user">ls -l /etc /bin</code></span></td>
+
+    <td>
+    <p>List the files in the <code>/bin</code> directory and
+    the <code>/etc</code> directory in long format</p>
+    </td>
+  </tr>
+
+  <tr>
+    <td><code class="user">ls -la ..</code></td>
+
+    <td>List all files (even ones with names
+    beginning with a period character, which are
+    normally hidden) in the parent of the working
+    directory in long format</td>
+  </tr>
+</tbody></table></div>
+
+<p>These examples also point out an important concept about commands. Most
+commands operate like this:</p>
+
+<div class="codeexample"><i>command -options arguments</i></div>
+
+<p>where <i>command</i> is the name of the command, <i>-options</i> is one or
+more adjustments to the command's behavior, and <i>arguments</i> is one or more
+"things" upon which the command operates.</p>
+
+<p>In the case of <code class="user">ls</code>, we see that <code class="user">ls</code> is the name of the command, and that it can have one or
+more options, such as <code class="user">-a</code> and <code class="user">-l</code>, and it can operate on one or more files or
+directories.</p>
+
+<h3>A Closer Look at Long Format</h3>
+
+<p>If we use the <code class="user">-l</code> option with <code class="user">ls</code>, you will get a file listing that
+contains a wealth of information about the files
+being listed. Here's an example:<br>
+<br>
+</p>
+<hr>
+<pre><code class="user">
+-rw-------   1 me       me            576 Apr 17  2019 weather.txt
+drwxr-xr-x   6 me       me           1024 Oct  9  2019 web_page
+-rw-rw-r--   1 me       me         276480 Feb 11 20:41 web_site.tar
+-rw-------   1 me       me           5743 Dec 16  2018 xmas_file.txt
+
+----------     -------  -------  -------- ------------ -------------
+    |             |        |         |         |             |
+    |             |        |         |         |         File Name
+    |             |        |         |         |
+    |             |        |         |         +---  Modification Time
+    |             |        |         |
+    |             |        |         +-------------   Size (in bytes)
+    |             |        |
+    |             |        +-----------------------        Group
+    |             |
+    |             +--------------------------------        Owner
+    |
+    +----------------------------------------------   File Permissions
+</code>
+</pre>
+<hr>
+
+<dl>
+  <dt><strong>File Name</strong></dt>
+
+  <dd>The name of the file or directory.</dd>
+
+  <dt><strong>Modification Time</strong></dt>
+
+  <dd>The last time the file was modified. If the
+  last modification occurred more than six months
+  in the past, the date and year are displayed.
+  Otherwise, the time of day is shown.</dd>
+
+  <dt><strong>Size</strong></dt>
+
+  <dd>The size of the file in bytes.</dd>
+
+  <dt><strong>Group</strong></dt>
+
+  <dd>The name of the group that has file
+  permissions in addition to the file's owner.</dd>
+
+  <dt><strong>Owner</strong></dt>
+
+  <dd>The name of the user who owns the file.</dd>
+
+  <dt><strong>File Permissions</strong></dt>
+
+  <dd>A representation of the file's access
+  permissions. The first character is the type of
+  file. A "-" indicates a regular (ordinary) file.
+  A "d" indicates a directory. The second set of
+  three characters represent the read, write, and
+  execution rights of the file's owner. The next
+  three represent the rights of the file's group,
+  and the final three represent the rights granted
+  to everybody else. We'll discuss this in more detail
+  in a later lesson.</dd>
+</dl>
+
+<h2>less</h2>
+
+<p><code class="user">less</code> is a program that lets us view text files.
+This is very handy since many of the files used to control and configure Linux
+are human readable.</p>
+
+<div class="sidebar">
+<h2>What is "text"?</h2>
+
+<p>There are many ways to represent information on a computer. All methods
+involve defining a relationship between the information and some numbers that
+will be used to represent it.  Computers, after all, only understand numbers
+and all data is converted to numeric representation.</p>
+
+<p>Some of these representation systems are very complex (such as compressed
+multimedia files), while others are rather simple. One of the earliest and
+simplest is called <i>ASCII text</i>. <a href="http://linuxcommand.org/lc3_man_pages/ascii7.html">ASCII</a> (pronounced "As-Key") is short for
+American Standard Code for Information Interchange. This is a simple encoding
+scheme that was first used on Teletype machines to map keyboard characters to
+numbers.</p>
+
+<p>Text is a simple one-to-one mapping of characters to numbers. It is very
+compact. Fifty characters of text translates to fifty bytes of data. Throughout
+a Linux system, many files are stored in text format and there are many Linux
+tools that work with text files. Even Windows systems recognize the importance
+of this format. The well-known NOTEPAD.EXE program is an editor for plain ASCII
+text files.</p> </div>
+
+<p>The <code class="user">less</code> program is invoked by simply typing:</p>
+
+<pre>less <i>text_file</i>
+</pre>
+
+<p>This will display the file.</p>
+
+<h3>Controlling less</h3>
+
+<p>Once started, <code class="user">less</code> will display the text file one
+page at a time. We can use the Page Up and Page Down keys to move through the
+text file. To exit <code class="user">less</code>, we type "q". Here are some
+commands that <code class="user">less</code> will accept:<br> <br> </p>
+
+<div style="overflow-x: auto"><table>
+  <caption>
+    Keyboard commands for the less program
+  </caption>
+
+  <tbody><tr>
+    <th><strong>Command</strong></th>
+    <th><strong>Action</strong></th>
+  </tr>
+
+  <tr>
+    <td>Page Up or b</td>
+    <td>Scroll back one page</td>
+  </tr>
+
+  <tr>
+    <td>Page Down or space</td>
+    <td>Scroll forward one page</td>
+  </tr>
+
+  <tr>
+    <td>G</td>
+    <td>Go to the end of the text file</td>
+  </tr>
+
+  <tr>
+    <td>1G</td>
+    <td>Go to the beginning of the text file</td>
+  </tr>
+
+  <tr>
+    <td>/<i>characters</i></td>
+    <td>Search forward in the text file for an
+    occurrence of the specified <i>characters</i></td>
+  </tr>
+
+  <tr>
+    <td>n</td>
+    <td>Repeat the previous search</td>
+  </tr>
+
+  <tr>
+    <td>h</td>
+    <td>Display a complete list less commands and options</td>
+  </tr>
+  
+  <tr>
+    <td>q</td>
+    <td>Quit</td>
+  </tr>
+</tbody></table></div>
+
+<h2>file</h2>
+
+<p>As we wander around our Linux system, it is helpful to determine what kind
+of data a file contains before we try to view it. This is where the <code class="user">file</code> command comes in. <code class="user">file</code>
+will examine a file and tell us what kind of file it is.</p>
+
+<p>To use the <code class="user">file</code> program, we just type:</p>
+
+<pre><code>file <i>name_of_file</i></code></pre>
+
+<p>The <code class="user">file</code> program can recognize most types of
+files, such as:<br><br></p>
+
+<div style="overflow-x: auto"><table>
+  <caption>Various kinds of files</caption>
+
+  <tbody><tr>
+    <th><strong>File Type</strong></th>
+    <th><strong>Description</strong></th>
+    <th><strong>Viewable as text?</strong></th>
+  </tr>
+
+  <tr>
+    <td>ASCII text</td>
+    <td>The name says it all</td>
+    <td>yes</td>
+  </tr>
+
+  <tr>
+    <td>Bourne-Again shell script text</td>
+    <td>A <code class="user">bash</code> script</td>
+    <td>yes</td>
+  </tr>
+
+  <tr>
+    <td>ELF 64-bit LSB executable</td>
+    <td>An executable binary program</td>
+    <td>no</td>
+  </tr>
+
+  <tr>
+    <td>ELF 64-bit LSB shared object</td>
+    <td>A shared library</td>
+    <td>no </td>
+  </tr>
+
+  <tr>
+    <td>GNU tar archive</td>
+    <td>A tape archive file. A common way of storing groups of files.</td>
+    <td>no, use <code class="user">tar tvf</code> to view listing.</td>
+  </tr>
+
+  <tr>
+    <td>gzip compressed data</td>
+    <td>An archive compressed with <code class="user">gzip</code></td>
+    <td>no</td>
+  </tr>
+
+  <tr>
+    <td>HTML document text</td>
+    <td>A web page</td>
+    <td>yes</td>
+  </tr>
+
+  <tr>
+    <td>JPEG image data</td>
+    <td>A compressed JPEG image</td>
+    <td>no</td>
+  </tr>
+
+  <tr>
+    <td>PostScript document text</td>
+    <td>A PostScript file</td>
+    <td>yes</td>
+  </tr>
+
+  <tr>
+    <td>Zip archive data</td>
+    <td>An archive compressed with <code class="user">zip</code></td>
+    <td>no</td>
+  </tr>
+</tbody></table></div>
+
+<p>While it may seem that most files cannot be viewed as text, a surprising
+number can be.  This is especially true of the important configuration files.
+During our adventure we will see that many features of the operating system are
+controlled by text configuration files and shell scripts. In Linux, there are
+no secrets!</p>
+
+
+
+    <div class="pagenav">
+      <a href="#top">Top</a> | <a href="http://linuxcommand.org/lc3_lts0020.php">Previous</a> | <a href="http://linuxcommand.org/lc3_learning_the_shell.php#contents">Contents</a> | <a href="http://linuxcommand.org/lc3_lts0040.php">Next</a>
+    </div>
+<div class="footer">
+<hr>
+<p class="fineprint">
+© 2000-2023,
+<a href="mailto:bshotts@users.sourceforge.net">William E. Shotts, Jr.</a>
+Verbatim copying and distribution of this entire article is
+permitted in any medium, provided this copyright notice is preserved.</p>
+<p class="fineprint">Linux® is a registered trademark of Linus Torvalds.</p>
+</div><!-- footer -->
+</div><!-- main -->
+</div><!-- grid-container -->
+
+
+</body></html>

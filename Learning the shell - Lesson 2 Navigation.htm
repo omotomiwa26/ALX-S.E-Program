@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+
+    <title>Learning the shell - Lesson 2: Navigation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Navigating the Linux File System. Introduces directory structure and command line tools for moving around.">
+    <meta name="keywords" content="linux, shell, bash, linux file system, directories, directory structure, pwd, cd, ls, root directory, home directory, parent directory, absolute pathnames, relative pathnames">
+    <meta name="author" content="William Shotts, Jr.">
+    <meta name="copyright" content="Copyright 2000-2023, William Shotts, Jr.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="http://linuxcommand.org/favicon.png">
+    <link rel="stylesheet" type="text/css" href="Learning%20the%20shell%20-%20Lesson%202%20Navigation_files/linuxcommand5.css">
+    <link rel="prev" href="http://linuxcommand.org/lc3_lts0010.php">
+    <link rel="next" href="http://linuxcommand.org/lc3_lts0030.php">
+    <link rel="contents" href="http://linuxcommand.org/lc3_learning_the_shell.php#contents">
+    </head>
+
+    <body>
+
+    <div class="grid-container">
+    <div class="colorblock-red">
+    </div><!-- colorblock-red -->
+    <div class="title-img">
+    </div><!-- title-img -->
+    <div class="colorblock-white">
+    <div class="navbar">
+      <ul style="line-height: 150%;">
+        <li><a href="http://linuxcommand.org/index.php">Home</a></li>
+        <li><a href="http://linuxcommand.org/lc3_learning_the_shell.php">Learning&nbsp;the&nbsp;Shell</a></li>
+        <li><a href="http://linuxcommand.org/lc3_writing_shell_scripts.php">Writing&nbsp;Shell&nbsp;Scripts</a></li>
+        <li><a href="http://linuxcommand.org/lc3_resources.php">Resources</a></li>
+        <li><a href="http://linuxcommand.org/tlcl.php">Books</a></li>
+        <li><a href="http://linuxcommand.org/lc3_adventures.php">Adventures</a></li>
+      </ul>
+      <hr>
+      <ul>
+        <li><a href="https://lcorg.blogspot.com/">Blog</a></li>
+      </ul>
+    </div><!-- navbar -->
+  
+    </div><!-- colorblock-white -->
+
+    <div id="top" class="main">
+    <div class="pagenav">
+      <div class="homebutton">
+      <a href="http://linuxcommand.org/index.php">Home</a> |
+      </div>
+      <a href="http://linuxcommand.org/lc3_lts0010.php">Previous</a> | <a href="http://linuxcommand.org/lc3_learning_the_shell.php#contents">Contents</a> | <a href="http://linuxcommand.org/lc3_lts0030.php">Next</a>
+    </div><h1>Navigation</h1>
+
+<p>In this lesson, we will introduce our first three commands: <code class="user"><a href="http://linuxcommand.org/lc3_man_pages/pwdh.html">pwd</a></code> (print working
+directory), <code class="user"><a href="http://linuxcommand.org/lc3_man_pages/cdh.html">cd</a></code>
+(change directory), and <code class="user"><a href="http://linuxcommand.org/lc3_man_pages/ls1.html">ls</a></code> (list files and directories).</p>
+
+<p>Those new to the command line will need to pay close attention to this
+lesson since the concepts will take some getting used to.</p>
+
+<h2>File System Organization</h2>
+
+<p>Like Windows, the files on a Linux system are arranged in what is called a
+<i>hierarchical directory structure</i>. This means that they are organized in
+a tree-like pattern of <i>directories</i> (called folders in other systems),
+which may contain files and <i>subdirectories</i>. The first directory in the
+file system is called the <i>root directory</i>. The root directory contains
+files and subdirectories, which contain more files and subdirectories and so on
+and so on.</p>
+
+<p>Most graphical environments include a file manager program used to view and
+manipulate the contents of the file system. Often we will see the file system
+represented like this:
+
+<img src="Learning%20the%20shell%20-%20Lesson%202%20Navigation_files/file_manager.jpg" alt="directory tree"></p>
+
+<p>One important difference between Windows and Unix-like operating systems
+such as Linux is that Linux does not employ the concept of drive letters. While
+Windows drive letters split the file system into a series of different trees
+(one for each device), Linux always has a single tree. Different storage
+devices may be different branches of the tree, but there is always just a
+single tree.</p>
+
+<h2>pwd</h2>
+
+<p>Since the command line interface cannot provide graphic pictures of the file
+system structure, we must have a different way of representing it. To do this,
+think of the file system tree as a maze, and that we are standing in it. At any
+given moment, we are located in a single directory. Inside that directory, we
+can see its files and the pathway to its <i>parent directory</i> and the
+pathways to the subdirectories of the directory in which we are standing.</p>
+
+<p>The directory we are standing in is called the <i>working directory</i>. To
+see the name of the working directory, we use the <code class="user">pwd</code>
+command.</p>
+
+<div class="display">[me@linuxbox me]$ <code class="cmd">pwd</code>
+/home/me</div>
+
+<p>When we first log on to our Linux system, the working directory is set to
+our <i>home directory</i>.  This is where we put our files. On most systems,
+the home directory will be called /home/user_name, but it can be anything
+according to the whims of the system administrator.</p>
+
+<p>To list the files in the working directory, we use the <code class="user">ls</code> command.</p>
+
+<div class="display">[me@linuxbox me]$ <code class="cmd">ls</code>
+Desktop    Downloads         foo.txt  Pictures  Templates
+Documents  examples.desktop  Music    Public    Videos</div>
+
+<p>We will come back to <code class="user">ls</code> in the next lesson. There
+are a lot of fun things you can do with it, but we have to talk about pathnames
+and directories a bit first.</p>
+
+<h2>cd</h2>
+
+<p>To change the working directory (where we are standing in the maze) we use
+the <code class="user">cd</code> command. To do this, we type <code class="user">cd</code> followed by the <i>pathname</i> of the desired working
+directory. A pathname is the route we take along the branches of the tree to
+get to the directory we want. Pathnames can be specified two different ways;
+<i>absolute pathnames</i> or <i>relative pathnames</i>. Let's look with
+absolute pathnames first.</p>
+
+<p>An absolute pathname begins with the root directory and follows the tree
+branch by branch until the path to the desired directory or file is completed.
+For example, there is a directory on your system in which most programs are
+installed. The pathname of the directory is <code>/usr/bin</code>. This means
+from the root directory (represented by the leading slash in the pathname)
+there is a directory called "usr" which contains a directory called "bin".</p>
+
+<p>Let's try this out:</p>
+
+<div class="display">me@linuxbox me]$ <code class="cmd">cd /usr/bin</code>
+me@linuxbox bin]$ <code class="cmd">pwd</code>
+/usr/bin
+me@linuxbox bin]$ <code class="cmd">ls</code>
+'['                                   mshortname
+ 2to3-2.7                             mshowfat
+ 411toppm                             mtools
+ a2ps                                 mtoolstest
+ a2ps-lpr-wrapper                     mtr
+ aa-enabled                           mtrace
+ aa-exec                              mtr-packet
+ aclocal                              mtvtoppm
+ aclocal-1.15                         mtype
+ aconnect                             mutter
+ acpi_listen                          mxtar
+ add-apt-repository                   mzip
+ addpart                              namei
+
+and many more...</div>
+
+<p>Now we can see that we have changed the current working directory to
+<code>/usr/bin</code> and that it is full of files. Notice how the shell prompt
+has changed?  As a convenience, it is usually set up to display the name of the
+working directory.</p>
+
+<p>Where an absolute pathname starts from the root directory and leads to its
+destination, a relative pathname starts from the working directory. To do this,
+it uses a couple of special notations to represent relative positions in the
+file system tree. These special notations are "." (dot) and ".." (dot dot).</p>
+
+<p>The "." notation refers to the working directory itself and the ".."
+notation refers to the working directory's parent directory. Here is how it
+works. Let's change the working directory to /usr/bin again:</p>
+
+<div class="display">me@linuxbox me]$ <code class="cmd">cd /usr/bin</code>
+me@linuxbox bin]$ <code class="cmd">pwd</code>
+/usr/bin</div>
+
+<p>O.K., now let's say that we wanted to change the working directory to the
+parent of <code>/usr/bin</code> which is <code>/usr</code>. We could do that
+two different ways. First, with an absolute pathname:</p>
+
+<div class="display">me@linuxbox bin]$ <code class="cmd">cd /usr</code>
+me@linuxbox usr]$ <code class="cmd">pwd</code>
+/usr</div>
+
+<p>Or, with a relative pathname:</p>
+
+<div class="display">me@linuxbox bin]$ <code class="cmd">cd ..</code>
+me@linuxbox usr]$ <code class="cmd">pwd</code>
+/usr</div>
+
+<p>Two different methods with identical results. Which one should we use? The
+one that requires the least typing!</p>
+
+<p>Likewise, we can change the working directory from <code>/usr</code> to
+<code>/usr/bin</code> in two different ways. First using an absolute
+pathname:</p>
+
+<div class="display">me@linuxbox usr]$ <code class="cmd">cd /usr/bin</code>
+me@linuxbox bin]$ <code class="cmd">pwd</code>
+/usr/bin</div>
+
+<p>Or, with a relative pathname:</p>
+
+<div class="display">me@linuxbox usr]$ <code class="cmd">cd ./bin</code>
+me@linuxbox bin]$ <code class="cmd">pwd</code>
+/usr/bin</div>
+
+<p>Now, there is something important that we must point out here. In most
+cases, we can omit the "./". It is implied. Typing:</p>
+
+<div class="display">me@linuxbox usr]$ <code class="cmd">cd bin</code></div>
+
+<p>would do the same thing. In general, if we do not specify a pathname to
+something, the working directory will be assumed. There is one important
+exception to this, but we won't get to that for a while.</p>
+
+<h2>A Few Shortcuts</h2>
+
+<p>If we type <code class="user">cd</code> followed by nothing, <code class="user">cd</code> will change the working directory to our home
+directory.</p>
+
+<p>A related shortcut is to type <code class="user">cd
+~<i>user_name</i></code>. In this case, <code class="user">cd</code> will
+change the working directory to the home directory of the specified user.</p>
+
+<p>Typing <code class="user">cd -</code> changes the working
+directory to the previous one.</p>
+
+<div class="sidebar">
+
+  <h2>Important facts about file names</h2>
+
+  <ol>
+
+    <li><p>File names that begin with a period character are hidden. This only
+    means that <code class="user">ls</code> will not list them unless we say
+    <code class="user">ls -a</code>. When your account was created, several
+    hidden files were placed in your home directory to configure things for
+    your account. Later on we will take a closer look at some of these files to
+    see how you can customize our <i>environment</i>. In addition, some
+    applications will place their configuration and settings files in your home
+    directory as hidden files.</p></li>
+
+    <li><p>File names in Linux, like Unix, are case sensitive. The file names
+    "File1" and "file1" refer to different files.</p></li>
+
+    <li><p>Linux has no concept of a "file extension" like Windows systems. You
+    may name files any way you like. However, while Linux itself does not care
+    about file extensions, many application programs do.</p></li>
+
+    <li><p>Though Linux supports long file names which may contain embedded
+    spaces and punctuation characters, limit the punctuation characters to
+    period, dash, and underscore. <strong>Most importantly, do not embed spaces
+    in file names.</strong> If you want to represent spaces between words in a
+    file name, use underscore characters. You will thank yourself
+    later.</p></li>
+    
+  </ol> </div>
+
+
+
+    <div class="pagenav">
+      <a href="#top">Top</a> | <a href="http://linuxcommand.org/lc3_lts0010.php">Previous</a> | <a href="http://linuxcommand.org/lc3_learning_the_shell.php#contents">Contents</a> | <a href="http://linuxcommand.org/lc3_lts0030.php">Next</a>
+    </div>
+<div class="footer">
+<hr>
+<p class="fineprint">
+© 2000-2023,
+<a href="mailto:bshotts@users.sourceforge.net">William E. Shotts, Jr.</a>
+Verbatim copying and distribution of this entire article is
+permitted in any medium, provided this copyright notice is preserved.</p>
+<p class="fineprint">Linux® is a registered trademark of Linus Torvalds.</p>
+</div><!-- footer -->
+</div><!-- main -->
+</div><!-- grid-container -->
+
+
+</body></html>
