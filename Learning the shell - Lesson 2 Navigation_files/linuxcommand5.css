@@ -1,0 +1,372 @@
+@media all {
+  a:link {
+    color:      #005580;
+  }
+  
+  a:visited {
+    color:      #002740;
+  }
+  
+  a:hover {
+    background-color: red;
+    color:      white;
+  }
+  
+  body {
+    background: #005580;
+    color: black;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 14pt;
+    font-style: normal;
+    font-weight: normal;
+    padding: 10px 10px 10px 10px;
+  }
+
+  .cmd { /* Commands typed at the prompt by the user */
+    background: transparent;
+    color: white;
+    font-size: 100%;
+    font-weight: bold;
+  }
+
+  code { /* Variables that appear in the text */
+    font-family: lucidatypewriter, monospace, courier;
+    font-size: 100%;
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  .codeexample { /* Coding example */
+    background-color: #E0E0E0;
+    font-family: lucidatypewriter, monospace, courier;
+    overflow-x: auto;
+    padding: 0.5em;
+    white-space: pre;
+  }
+  
+  .colorblock-red {
+    background-color: red;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .colorblock-white {
+    background-color: white;
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .display { /* Terminal display */
+    background-color: #000000;
+    color: #00FF00;
+    font-family: lucidatypewriter, monospace, courier;
+    overflow-x: auto;
+    padding: 0.5em;
+    white-space: pre;
+  }
+  
+  .fineprint {
+    font-size: 80%;
+    text-align: left;
+  }
+  
+  .footer {
+    float: left;
+    font-size: 80%
+  }
+
+  .grid-container {
+    background-color: white;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 25% 75%;
+    padding: 10px 10px 10px 10px;
+  }
+
+  h1  {
+    font-size: 200%;
+    font-style: normal;
+    font-weight: normal;
+    text-align: left;
+  }
+  
+  h2  {
+    font-size: 150%;
+    font-style: normal;
+    font-weight: normal;
+    text-align: left;
+  }
+  
+  h3  {
+    font-size: 120%;
+    font-style: normal;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  h4  {
+    font-size: 110%;
+    font-style: normal;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .homebutton {
+    display: inline;
+  }
+
+  hr {
+    border: solid 1px black;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .main {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 10px 10px 10px 10px;
+  }
+
+  .narrow {
+    font-size:    80%;
+  }
+  
+  .navbar { /* Main navigation bar - desktop */
+    padding: 3em 0em 1em 0em;
+  }
+  
+  .navbar2 { /* Main navigation bar - phone, tablet */
+    padding: 0em 0em 1em 0em;
+  }
+  
+  .pagenav {
+    font-size: 90%;
+    padding: 0.5em;
+    text-align: right;
+  }
+
+  pre {
+    background-color: #eee;
+    display: block;
+    font-family: lucidatypewriter, monospace, courier;
+    margin: 0px 0px;
+    overflow-x: auto;
+    padding: 1em;
+  }
+
+  pre.bold {
+    font-weight: bold;
+  }
+
+  .sidebar { /* Regular sidebar */
+    background-color: #E0E0E0;
+    padding: 1em;
+  }
+
+  table {
+    border-collapse: collapse;
+    caption-side: bottom;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+  }
+
+  th, td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .title-img {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 65px 5px 25px 5px;
+  }
+
+  .user { /* User commands that appear in the text */
+    font-size: 100%;
+    font-weight: bold;
+  }
+
+  .warning { /* Warning sidebar */
+    border: 1px solid black;
+    color:  #FF0000;
+    padding: 1em;
+  }
+
+  /* Styles taken from pandoc for source code highlighting */
+
+	table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+		margin:			0;
+		padding:		0;
+		vertical-align:		baseline;
+		border:			none;
+	}
+
+	table.sourceCode {
+		max-width:		80%;
+	}
+
+	td.lineNumbers {
+		text-align:		right;
+		padding-right:		4px;
+		padding-left:		4px;
+		color:			#aaaaaa;
+		border-right:		1px solid #aaaaaa;
+	}
+
+	td.sourceCode {
+		padding-left:		5px;
+	}
+
+	code > span.kw {
+		color:			#007020;
+		font-weight:		bold;
+	}
+
+	code > span.dt {
+		color:			#902000;
+	}
+
+	code > span.dv {
+		color:			#40a070;
+	}
+
+	code > span.bn {
+		color:			#40a070;
+	}
+
+	code > span.fl {
+		color:			#40a070;
+	}
+
+	code > span.ch {
+		color:			#4070a0;
+	}
+
+	code > span.st {
+		color:			#4070a0;
+	}
+
+	code > span.co {
+		color:			#60a0b0;
+		font-style:		italic;
+	}
+
+	code > span.ot {
+		color:			#007020;
+	}
+
+	code > span.al {
+		color:			#ff0000;
+		font-weight:		bold;
+	}
+
+	code > span.fu {
+		color:			#06287e;
+	}
+
+	code > span.er {
+		color:			#ff0000;
+		font-weight:		bold;
+	}
+}
+
+@media (max-width:320px) { /* smartphones, iPhone, portrait 480x320 phones */ }
+
+@media (max-width:481px)  { /* portrait e-readers, smaller tablets @ 600 or @ 640 wide. */ 
+  .title-img {
+    padding: 25px 10px 15px 10px;
+  }
+}
+
+@media (max-width:930px) {
+  body {
+    border-style: none;
+    font-size: 12pt;
+    padding: 5px 5px 5px 5px;
+  }
+
+  .colorblock-red {
+    display: none;
+  }
+
+  .colorblock-white {
+    display: none;
+  }
+
+  .grid-container {
+    grid-template-columns: 0% 100%;
+    grid-gap: 0px;
+  }
+
+  h1  {
+    font-size: 150%;
+    font-weight: normal;
+  }
+  
+  h2  {
+    font-size: 125%;
+    font-weight: normal;
+  }
+  
+  h3  {
+    font-size: 110%;
+    font-weight: bold;
+  }
+  
+  h4  {
+    font-size: 100%;
+    font-weight: bold;
+  }
+  
+  .navbar {
+    display: none;
+  }
+}
+
+@media (min-width:931px)  { /* portrait tablets, landscape 800x480 or 854x480 phones */ 
+  .homebutton {
+    display: none;
+  }
+
+  .navbar2 {
+    display: none;
+  }
+}
+
+@media (max-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+
+@media (max-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+
+@media (max-width:1281px) { /* hi-res laptops and desktops */ }
+
+@media print {
+  body {
+    background: white;
+  }
+
+  .grid-container {
+    grid-template-columns: 0% 100%;
+    grid-gap: 0px;
+  }
+  .navbar, .navbar2 {
+    display: none;
+  }
+
+  .pagenav {
+    display: none;
+  }
+
+/*  .title-img {
+    display: none;
+  } */
+}

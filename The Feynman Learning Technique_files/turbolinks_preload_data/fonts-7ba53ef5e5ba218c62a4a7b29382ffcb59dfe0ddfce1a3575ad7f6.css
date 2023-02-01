@@ -1,0 +1,72 @@
+/*
+ * The fonts included are copyrighted by the vendors listed below.
+ *
+ * Name: Proxima Nova
+ * Vendor: Mark Simonson Studio
+ * License URL: http://www.fontspring.com/fflicense/mark-simonson-studio
+ */
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url(/assets/ProximaNova-Reg-webfont-9411f78408fabd9753d3cf184404b99189ed65e732964d6f6724753a353f4b8c.eot);
+  src: url(/assets/ProximaNova-Reg-webfont-9411f78408fabd9753d3cf184404b99189ed65e732964d6f6724753a353f4b8c.eot?#iefix)
+      format("embedded-opentype"),
+    url(/assets/ProximaNova-Reg-webfont-f0292502f8f734b412a11c4af8829b5b9b78f627889934c6c87f459aecf1638c.woff2) format("woff2"),
+    url(/assets/ProximaNova-Reg-webfont-a65ddc1bd0ea065820de180b25ca9deb20e80a8c485a31616dfa4796ff394300.ttf) format("truetype"),
+    url(/assets/ProximaNova-Reg-webfont-ec4d87515c9ed5462e7283a285dd3f23d99afab7cc70b21a197b83661ed18554.svg#ProximaNovaRegular) format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url(/assets/ProximaNova-RegIt-webfont-c9ac206555713c75efb7b39553f3dc697abf3c03a0627dc0cbfe4befb110467e.eot);
+  src: url(/assets/ProximaNova-RegIt-webfont-c9ac206555713c75efb7b39553f3dc697abf3c03a0627dc0cbfe4befb110467e.eot?#iefix)
+      format("embedded-opentype"),
+    url(/assets/ProximaNova-RegIt-webfont-879512d5c5565a28165a87abbc22b101b592a8c45147cae0b8a5b1ca0966a76d.woff2) format("woff2"),
+    url(/assets/ProximaNova-RegIt-webfont-43ac9b8c739f0f3ff90e6f5afca0dbd84bbc2acc01ca624a6f42b1236320dd1d.ttf) format("truetype"),
+    url(/assets/ProximaNova-RegIt-webfont-8a1f63961218b8279c9441fb71e2d943f3fc0729257d76e5158ac738824d4cfc.svg#ProximaNovaRegularItalic)
+      format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url(/assets/ProximaNova-Bold-webfont-e5f409f8ddb122dbef6ee0df4e1b2aca7d69ae3c9a15103b265e206aab18de1c.eot);
+  src: url(/assets/ProximaNova-Bold-webfont-e5f409f8ddb122dbef6ee0df4e1b2aca7d69ae3c9a15103b265e206aab18de1c.eot?#iefix)
+      format("embedded-opentype"),
+    url(/assets/ProximaNova-Bold-webfont-433352ef79f11dbf974c0ce7710afd05f9ab6fd92a89852e8348e82f1a1e9fcc.woff2) format("woff2"),
+    url(/assets/ProximaNova-Bold-webfont-a3ddd3b04eeef1717f8eed035e0437202a9e53a5a7ae00d28fc9c083bd7d0aed.ttf) format("truetype"),
+    url(/assets/ProximaNova-Bold-webfont-fa9fe5a867a01367ac2a0f84669be7ab54af0f6a2d8f61ae6aa6ad62f86c45a3.svg#ProximaNovaBold) format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Soehne";
+  font-weight: 400;
+  src: url(/assets/soehne-web-buch-e07c8677adedb4417087da36b04dba2a5e400e303b20eeaaf8f27d303d4f5d6c.woff) format("woff"),
+    url(/assets/soehne-web-buch-8e919a95759e376d859fb8e5a512034cae6f5b83f1790bd8ae039769c6947466.woff2) format("woff2"),
+    url(/assets/soehne-web-buch-a29c153046af627225356e729314907d36a9965e02950854c8ad12ff4ca1d702.eot);
+}
+
+@font-face {
+  font-family: "Soehne";
+  font-weight: 500;
+  src: url(/assets/soehne-web-halbfett-b8707bc635df63d12fc5a3be9fd4ac2114915b2639df458857f800865556f395.woff) format("woff"),
+    url(/assets/soehne-web-halbfett-538aa1afb74ab8042eee6ebd81d7938ad41cfb97128d7967363c46f5a4eee99f.woff2) format("woff2"),
+    url(/assets/soehne-web-halbfett-0bfe36c39840753e0cd3f3893a7f488b210680a73515e570fae75c4f6a89cd35.eot);
+}
+
+@font-face {
+  font-family: "Soehne";
+  font-weight: 700;
+  src: url(/assets/soehne-web-dreiviertelfett-49d341c7239a36d47dd05ab78444e0f622e2b390ed9183065d9df6b28e7c4675.woff) format("woff"),
+    url(/assets/soehne-web-dreiviertelfett-7a5f2a6d569b16282619294d5fe0af16ea586d7558b3749afbaaf41e554a5b82.woff2) format("woff2"),
+    url(/assets/soehne-web-dreiviertelfett-6db678f2aedfd1fd0947745cec1bf6606b18ef08853770d5c40d3e4c4779689a.eot);
+}
+
+.font-brand {
+  font-family: "Soehne", sans-serif;
+}
