@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/academy/assets/css/default.11cdee4486985ef1923b.css?v=ce9f3c4560">
+  <meta name="generator" content="Ghost 5.32" />
+    <link rel="alternate" type="application/rss+xml" title="Brainscape Academy" href="https://ghost-stg.brainscape.com/academy/rss/" />
+    
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="b4529aa760e821152181444311" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://ghost-stg.brainscape.com/academy/" crossorigin="anonymous"></script>
+    <link href="https://ghost-stg.brainscape.com/academy/webmentions/receive/" rel="webmention" />
+    <script defer src="/academy/public/cards.min.js?v=ce9f3c4560"></script>
+    <link rel="stylesheet" type="text/css" href="/academy/public/cards.min.css?v=ce9f3c4560">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-10404519-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-10404519-6');
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E3XGXYFMGS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E3XGXYFMGS');
+</script>
+
+<!--Open Sans is loaded from an external link. Mont is loaded locally. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" media="print" onload="this.media='all'; this.onload=null;">
+<noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+</noscript>   <style>:root {--ghost-accent-color: #15171A;}</style>
+</head>
+
+  <body class="">
+    <nav class="academy-navbar">
+  <div class="navbar-logo">
+    <a href="/" class="logo-bsc"></a>
+    <ion-icon name="chevron-forward-sharp"></ion-icon>
+    <a href="/academy/" class="logo-academy-text">Academy</a>
+  </div>
+
+  <div class="navbar-items">
+    <ul class="navbar-options">
+      <li class="navbar-option studying opt-1">
+        <a class="navbar-link" href="/academy/studying/">
+          Learners
+        </a>
+      </li>
+      <li class="navbar-option teachers opt-2">
+        <a class="navbar-link" href="/academy/teachers/">
+          Teachers
+        </a>
+      </li>
+      <li class="navbar-option employee-training opt-3">
+        <a class="navbar-link" href="/academy/employee-training/">
+          Employers
+        </a>
+      </li>
+      <li class="navbar-option languages opt-4">
+        <a class="navbar-link" href="/academy/languages/">
+          Languages
+        </a>
+      </li>
+      <li class="navbar-option test-prep opt-5">
+        <a class="navbar-link" href="/academy/test-prep/">
+          Exams
+        </a>
+      </li>
+      <li class="navbar-option news opt-6">
+        <a class="navbar-link" href="/academy/news/">
+          News
+        </a>
+      </li>
+
+      <li class="navbar-option search-bar opt-7 hidden" id="search-icon">
+        <span>Search</span>
+        <ion-icon name="search-sharp"></ion-icon>
+      </li>
+    </ul>
+  </div>
+
+  <div class="icon-button hamburger-button" title="Explore the Brainscape academy">
+    <ion-icon name="menu-sharp"></ion-icon>
+  </div>
+</nav>
+<div id="search-box"></div>    
+  <section class="custom-error-page">
+    <div class="error-message">
+      <span class="band-heading">404</span>
+      <span class="band-heading">We're stumped...</span>
+      <p class="band-blurb">We can't find the page you're looking for. <br>Try navigating from our <a
+          href="https://www.brainscape.com/">homepage</a>
+        or the <a href="https://www.brainscape.com/academy">Brainscape Academy</a>.</p>
+    </div>
+    <div class="error-animation-container">
+      <div class="error-animation" id="bruce-error-animation"></div>
+    </div>
+  </section>
+
+  
+<section class="footer">
+  <div class="footer-top">
+    <div class="footer-logo">
+      <div class="logo">
+        <a class="brainscape-link" href="https://www.brainscape.com/">Brainscape</a>
+      </div>
+      <p>Flashcards for <b>serious learners</b>.</p>
+    </div>
+    
+    <div class="footer-social-media">
+      <div>Follow us: </div>
+      <ul class="logos">
+        <li class="logo">
+          <a href="https://twitter.com/brainscape" aria-label="Twitter" target="_blank" class="twitter">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </li>
+        <li class="logo">
+          <a href="https://www.linkedin.com/company/brainscape" aria-label="Linkedin" target="_blank" class="linkedin">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+          </li>
+        <li class="logo">
+          <a href="https://www.facebook.com/brainscape" aria-label="Facebook" target="_blank" class="facebook">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+        </li>
+        <li class="logo">
+          <a href="https://www.youtube.com/channel/UCzA7yXrHfZFdGe6p-GTgLtw" aria-label="Youtube" target="_blank" class="youtube">
+            <ion-icon name="logo-youtube"></ion-icon>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-mobile-apps">
+      <a href="https://apps.apple.com/us/app/brainscape-smart-flashcards/id442415567" target="_blank" class="apple-app">apple</a>
+      <a href="https://play.google.com/store/apps/details?id=com.brainscape.mobile.portal&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank" class="android-app">android</a>
+    </div>
+
+    
+  </div>
+  <hr>
+  <div class="footer-blurb">
+    Brainscape helps you realize your greatest personal and professional ambitions through strong habits and hyper-efficient studying. 
+  </div>
+  <div class="footer-blurb">&copy; 2023 Bold Learning Solutions.<a href="https://www.brainscape.com/terms" class="terms">Terms and Conditions</a></div>
+</section>
+  <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+      // TODO: Find better way to do this
+      window.addEventListener('load', function(event) {
+        const searchIcon = document.getElementById("search-icon"); 
+        const script = document.createElement('script');
+        script.src = "/academy/assets/js/search_box.475d371ab707bac29001.js?v=ce9f3c4560";
+        // lazily load searbox script 5s after current page is fully loaded
+        setTimeout(function() {
+          document.body.append(script);
+          searchIcon.classList.remove('hidden');
+        }, 5000);
+      });
+    </script>
+    
+    <script src="/academy/assets/js/default.040c55e00573fa00f0d2.js?v=ce9f3c4560" ></script>
+  </body>
+</html>

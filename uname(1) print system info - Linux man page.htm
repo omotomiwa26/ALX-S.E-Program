@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>uname(1): print system info - Linux man page</title>
+<!-- base href="https://linux.die.net/man/1/uname" -->
+<link rel="canonical" href="https://linux.die.net/man/1/uname">
+<link rel="stylesheet" type="text/css" href="uname(1)%20print%20system%20info%20-%20Linux%20man%20page_files/white.css">
+<link rel="shortcut icon" href="https://linux.die.net/favicon.ico" type="image/x-icon">
+<link href="https://linux.die.net/style/search.xml" rel="search" title="Search the die.net site" type="application/opensearchdescription+xml">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Print certain system information. With no OPTION, same as -s. -a, --all print all information, in the following order, except omit -p and -i if unknown: ...">
+<script src="uname(1)%20print%20system%20info%20-%20Linux%20man%20page_files/f_004.txt"></script><script src="uname(1)%20print%20system%20info%20-%20Linux%20man%20page_files/f_002.txt" id="google_shimpl"></script><script type="text/javascript" async="" src="uname(1)%20print%20system%20info%20-%20Linux%20man%20page_files/ga.js"></script><script type="text/javascript">
+<!--
+var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-50820-6']);_gaq.push(['_trackPageview']);
+window.google_analytics_uacct = 'UA-50820-6';
+// -->
+</script>
+<meta http-equiv="origin-trial" content="Az6AfRvI8mo7yiW5fLfj04W21t0ig6aMsGYpIqMTaX60H+b0DkO1uDr+7BrzMcimWzv/X7SXR8jI+uvbV0IJlwYAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A+USTya+tNvDPaxUgJooz+LaVk5hPoAxpLvSxjogX4Mk8awCTQ9iop6zJ9d5ldgU7WmHqBlnQB41LHHRFxoaBwoAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A7FovoGr67TUBYbnY+Z0IKoJbbmRmB8fCyirUGHavNDtD91CiGyHHSA2hDG9r9T3NjUKFi6egL3RbgTwhhcVDwUAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="Az6AfRvI8mo7yiW5fLfj04W21t0ig6aMsGYpIqMTaX60H+b0DkO1uDr+7BrzMcimWzv/X7SXR8jI+uvbV0IJlwYAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A+USTya+tNvDPaxUgJooz+LaVk5hPoAxpLvSxjogX4Mk8awCTQ9iop6zJ9d5ldgU7WmHqBlnQB41LHHRFxoaBwoAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A7FovoGr67TUBYbnY+Z0IKoJbbmRmB8fCyirUGHavNDtD91CiGyHHSA2hDG9r9T3NjUKFi6egL3RbgTwhhcVDwUAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><link rel="preload" href="uname(1)%20print%20system%20info%20-%20Linux%20man%20page_files/f.txt" as="script"><script type="text/javascript" src="uname(1)%20print%20system%20info%20-%20Linux%20man%20page_files/f.txt"></script><link rel="preload" href="uname(1)%20print%20system%20info%20-%20Linux%20man%20page_files/f_003.txt" as="script"><script type="text/javascript" src="uname(1)%20print%20system%20info%20-%20Linux%20man%20page_files/f_003.txt"></script><link rel="preload" href="uname(1)%20print%20system%20info%20-%20Linux%20man%20page_files/f.txt" as="script"><script type="text/javascript" src="uname(1)%20print%20system%20info%20-%20Linux%20man%20page_files/f.txt"></script><link rel="preload" href="uname(1)%20print%20system%20info%20-%20Linux%20man%20page_files/f_003.txt" as="script"><script type="text/javascript" src="uname(1)%20print%20system%20info%20-%20Linux%20man%20page_files/f_003.txt"></script><link rel="preload" href="uname(1)%20print%20system%20info%20-%20Linux%20man%20page_files/f.txt" as="script"><script type="text/javascript" src="uname(1)%20print%20system%20info%20-%20Linux%20man%20page_files/f.txt"></script><link rel="preload" href="uname(1)%20print%20system%20info%20-%20Linux%20man%20page_files/f_003.txt" as="script"><script type="text/javascript" src="uname(1)%20print%20system%20info%20-%20Linux%20man%20page_files/f_003.txt"></script></head>
+
+<body>
+<div id="bg">
+<div id="logo">
+<a href="https://www.die.net/"><img src="uname(1)%20print%20system%20info%20-%20Linux%20man%20page_files/logo.svg" alt="die.net" onerror="this.onerror=null; this.src='/style/logo.png'" width="120" height="120"></a>
+</div>
+<div id="content">
+
+<!-- google_ad_section_start -->
+<h1>uname(1) - Linux man page</h1>
+
+<h2>Name</h2>
+uname - print system information
+<h2>Synopsis</h2>
+<b>uname</b> [<i>OPTION</i>]...
+<h2>Description</h2>
+<div id="adright">
+<script async="" src="uname(1)%20print%20system%20info%20-%20Linux%20man%20page_files/f_005.txt"></script>
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-5823754184406795" data-ad-slot="7130739364" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_0_host" style="border: medium none; height: 280px; width: 336px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:336px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="uname(1)%20print%20system%20info%20-%20Linux%20man%20page_files/ads.htm" data-google-container-id="a!1" data-google-query-id="CMnStZODgf0CFYTI3godcGANmw" data-load-complete="true" width="336" height="280" frameborder="0"></iframe></div></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Print certain system information. With no OPTION, same as <b>-s</b>.
+</p><dl compact="compact">
+<dt><b>-a</b>, <b>--all</b>
+</dt><dd>print all information, in the following order, except omit <b>-p</b> and <b>-i</b> if unknown:
+</dd><dt><b>-s</b>, <b>--kernel-name</b>
+</dt><dd>print the kernel name
+</dd><dt><b>-n</b>, <b>--nodename</b>
+</dt><dd>print the network node hostname
+</dd><dt><b>-r</b>, <b>--kernel-release</b>
+</dt><dd>print the kernel release
+</dd><dt><b>-v</b>, <b>--kernel-version</b>
+</dt><dd>print the kernel version
+</dd><dt><b>-m</b>, <b>--machine</b>
+</dt><dd>print the machine hardware name
+</dd><dt><b>-p</b>, <b>--processor</b>
+</dt><dd>print the processor type or "unknown"
+</dd><dt><b>-i</b>, <b>--hardware-platform</b>
+</dt><dd>print the hardware platform or "unknown"
+</dd><dt><b>-o</b>, <b>--operating-system</b>
+</dt><dd>print the operating system
+</dd><dt><b>--help</b>
+</dt><dd>display this help and exit
+</dd><dt><b>--version</b>
+</dt><dd>output version information and exit</dd></dl>
+<h2>Author</h2>
+Written by David MacKenzie.
+<h2>Reporting Bugs</h2>
+Report uname bugs to <a href="mailto:bug-coreutils@gnu.org">bug-coreutils@gnu.org</a><br>
+GNU coreutils home page: &lt;<a href="http://www.gnu.org/software/coreutils/">http://www.gnu.org/software/coreutils/</a>&gt;<br>
+General help using GNU software: &lt;<a href="http://www.gnu.org/gethelp/">http://www.gnu.org/gethelp/</a>&gt;<br>
+Report uname translation bugs to &lt;<a href="http://translationproject.org/team/">http://translationproject.org/team/</a>&gt;
+<h2>Copyright</h2>
+Copyright © 2010 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later
+&lt;<a href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;.<br>
+This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.
+<h2>See Also</h2>
+<i><b><a href="https://linux.die.net/man/1/arch">arch</a></b>(1)</i>, <i><b><a href="https://linux.die.net/man/2/uname">uname</a></b>(2)</i>
+<p>The full documentation for <b>uname</b> is maintained as a Texinfo manual. If the <b>info</b> and <b>uname</b> programs are properly installed at your site,
+the command
+</p><dl compact="compact">
+<dt><b>info coreutils aquname invocationaq</b></dt></dl>
+<p>should give you access to the complete manual.
+
+<!-- google_ad_section_end -->
+</p><h2>Referenced By</h2>
+<b><a href="https://linux.die.net/man/1/flea" rel="nofollow">flea</a></b>(1),
+<b><a href="https://linux.die.net/man/8/lsof" rel="nofollow">lsof</a></b>(8)
+<div id="adbottom">
+<script async="" src="uname(1)%20print%20system%20info%20-%20Linux%20man%20page_files/f_005.txt"></script>
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-5823754184406795" data-ad-slot="8789940313" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_1_host" style="border: medium none; height: 280px; width: 336px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:336px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="uname(1)%20print%20system%20info%20-%20Linux%20man%20page_files/ads_002.htm" data-google-container-id="a!2" data-google-query-id="CL_Q0bWDgf0CFbEj0wodfzIMcg" data-load-complete="true" width="336" height="280" frameborder="0"></iframe></div></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+</div>
+<div id="menu">
+<dl>
+<dt>Site Search</dt>
+<dd>
+<form id="cse-search-box-menu" action="https://www.die.net/search/">
+<input name="q" type="text" size="10">
+<input type="hidden" name="sa" value="Search">
+<input type="hidden" name="ie" value="ISO-8859-1">
+<input type="hidden" name="cx" value="partner-pub-5823754184406795:54htp1rtx5u">
+<input type="hidden" name="cof" value="FORID:9">
+</form>
+<script type="text/javascript">
+<!--
+document.forms["cse-search-box-menu"].action = "https://www.die.net/search/";
+// -->
+</script>
+</dd></dl>
+
+
+
+<dl>
+<dt>Library</dt>
+<dd><a href="https://linux.die.net/">linux docs</a></dd>
+<dd><a href="https://linux.die.net/man/">linux man pages</a></dd>
+<dd><a href="https://www.die.net/musings/page_load_time/">page load time</a></dd>
+</dl>
+<dl>
+<dt>Toys</dt>
+<dd><a href="https://www.die.net/earth/">world sunlight</a></dd>
+<dd><a href="https://www.die.net/moon/">moon phase</a></dd>
+<dd><a href="http://trace.die.net/">trace explorer</a></dd>
+</dl>
+
+
+<dl>
+<dt><a href="https://linux.die.net/man/1/"><img src="uname(1)%20print%20system%20info%20-%20Linux%20man%20page_files/back.gif" alt="Back" width="20" height="22"></a></dt><dd></dd>
+</dl>
+</div></div>
+<script type="text/javascript">
+<!--
+if (top.location != self.location) top.location = self.location;
+if (/[?&][pq]=/.test(document.referrer)) document.write(unescape("%3Cscript src='/style/highlight.js' type='text/javascript'%3E%3C/script%3E"));
+function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: 'en', floatPosition: google.translate.TranslateElement.FloatPosition.TOP_RIGHT, gaTrack: true, gaId: 'UA-50820-6'});}
+if (!/^en/i.test(window.navigator.userLanguage||window.navigator.language)) document.write(unescape("%3Cscript src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit' type='text/javascript'%3E%3C/script%3E"));
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+// -->
+</script>
+<script>(function(){var js = "window['__CF$cv$params']={r:'79544e873af30095',m:'Q4KznJedr5MVMBqPboBwnh68.bFPveMtQJJy9vkpp7E-1675690922-0-AQX5BJftxVEJ6PvtzKetEbMbqyOeNr2Ebg/FRoBmig3XYkjyNpCzZHrZb/0jdu4S4hYGqayOxzKa0lY1HNvb3P349POqduVW/0hPrhp90TFQt2gAbPRZk1gGW3uiGnGgjQ==',s:[0x9543facb71,0x9f0251998c],u:'/cdn-cgi/challenge-platform/h/b'};var now=Date.now()/1000,offset=14400,ts=''+(Math.floor(now)-Math.floor(now%offset)),_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/h/b/scripts/alpha/invisible.js?ts='+ts,document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script><iframe style="position: absolute; top: 0px; left: 0px; border: medium none; visibility: hidden;" width="1" height="1"></iframe>
+
+<ins class="adsbygoogle adsbygoogle-noablate" style="display: none !important;" data-adsbygoogle-status="done" data-ad-status="unfilled"><div id="aswift_2_host" style="border: medium none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="uname(1)%20print%20system%20info%20-%20Linux%20man%20page_files/ads_003.htm" data-google-container-id="a!3" data-load-complete="true" frameborder="0"></iframe></div></ins><iframe src="uname(1)%20print%20system%20info%20-%20Linux%20man%20page_files/aframe.htm" style="display: none;" width="0" height="0"></iframe></body><iframe id="google_esf" name="google_esf" src="uname(1)%20print%20system%20info%20-%20Linux%20man%20page_files/zrt_lookup.htm" style="display: none;"></iframe></html>

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="google" content="notranslate">
+
+      <script type="text/javascript" async="" src="Concept%20The%20Framework%20Lagos%20Intranet_files/js"></script><script async="" src="Concept%20The%20Framework%20Lagos%20Intranet_files/gtm.js"></script><script>
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({"userId":258926,"visitorType":"student","batch":{"id":65,"fullNameWithC":"LOS-0123 (C#12)","schoolLocation":{"id":3,"name":"Lagos"}},"curriculum":{"id":1,"name":"Foundations"}});
+
+    window.gtm_user_custom_event = function (name, options) {
+      if (typeof name === 'undefined') {
+        return;
+      }
+
+      window.dataLayer.push({
+        customEventOptions: typeof options !== 'undefined' ? options : {},
+        event: name,
+      });
+    }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N4C8MF2');</script>
+  <!-- End Google Tag Manager -->
+
+
+    <title>Concept: The Framework | Lagos Intranet</title>
+
+      <link rel="stylesheet" href="Concept%20The%20Framework%20Lagos%20Intranet_files/xgz4ilr.css">
+      <link rel="stylesheet" media="all" href="Concept%20The%20Framework%20Lagos%20Intranet_files/application_alx-e8838960a431efe7da7f5c95f98f095fea27669b6c60.css">
+      <script src="Concept%20The%20Framework%20Lagos%20Intranet_files/loader.js"></script>
+      <script src="Concept%20The%20Framework%20Lagos%20Intranet_files/application-d6aae7f7853f92b7c29b12f8d839da6ba98c61e2d3a4c5d3d.js"></script>
+      <link rel="shortcut icon" type="image/x-icon" href="https://intranet.alxswe.com/favicon_alx.ico">
+      <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="FMBzJ_T5IqzKg-Rp5dsegTobX3AGO2tQp5xBbN67HSRZPLZ7eLcy1TWOH8OUm66FAfHPflWg4o1JNT0s5E9ktg">
+
+      <link rel="apple-touch-icon" href="https://intranet.alxswe.com/apple-touch-icon_alx.png">
+
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <!-- Store user timezone -->
+      <script>
+        Cookies.set('timezone', (new Date()).getTimezoneOffset() / -60.0);
+      </script>
+
+      <!-- intro.js for interactive onboarding -->
+
+      <!-- React -->
+      <script src="Concept%20The%20Framework%20Lagos%20Intranet_files/application-f96fd86efca75a5a2930.js"></script>
+      <link rel="stylesheet" media="screen" href="Concept%20The%20Framework%20Lagos%20Intranet_files/application-87456da7.css">
+  </head>
+
+  <body class="signed_in env_production notranslate" translate="no" data-theme-suffix="_alx">
+      <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4C8MF2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+      <input type="hidden" id="hbtn-slack-url" value="https://alx-students.slack.com">
+      <nav class="navbar navbar-default navbar-fixed-top topbar visible-xs">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-mobile" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <a class="navbar-brand" href="https://intranet.alxswe.com/">
+      <div class="logo"></div>
+</a>  </div>
+
+  <div class="collapse navbar-collapse navigation" id="navbar-mobile">
+    <ul class="nav navbar-nav">
+      
+
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Planning"><a href="https://intranet.alxswe.com/planning/me"><div class="icon "><i aria-hidden="true" class="fa fa-calendar "></i></div><div class="visible-xs">My Planning</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-current-projects-item" title="" data-original-title="Projects"><a href="https://intranet.alxswe.com/projects/current"><div class="icon "><i aria-hidden="true" class="fa fa-code-fork "></i></div><div class="visible-xs">Projects</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="QA Reviews I can make"><a href="https://intranet.alxswe.com/corrections/to_review"><div class="icon "><i aria-hidden="true" class="fa fa-check "></i></div><div class="visible-xs">QA Reviews I can make</div></a></li>
+    
+    
+
+    <hr title="My resources">
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Curriculums"><a href="https://intranet.alxswe.com/dashboards/my_curriculums"><div class="icon "><i aria-hidden="true" class="fa fa-graduation-cap "></i></div><div class="visible-xs">Curriculums</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-concepts-item" title="" data-original-title="Concepts"><a href="https://intranet.alxswe.com/concepts"><div class="icon "><i aria-hidden="true" class="fa fa-file-text "></i></div><div class="visible-xs">Concepts</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-video-rooms" title="" data-original-title="Conference rooms"><a href="https://intranet.alxswe.com/dashboards/video_rooms"><div class="icon "><i aria-hidden="true" class="fa fa-comments "></i></div><div class="visible-xs">Conference rooms</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Servers"><a href="https://intranet.alxswe.com/servers"><div class="icon "><i aria-hidden="true" class="fa fa-server "></i></div><div class="visible-xs">Servers</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-my-containers" title="" data-original-title="Sandboxes"><a href="https://intranet.alxswe.com/user_containers/current"><div class="icon "><i aria-hidden="true" class="fa fa-terminal "></i></div><div class="visible-xs">Sandboxes</div></a></li>
+    
+    
+
+      <hr title="My campus">
+
+      
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Peers"><a href="https://intranet.alxswe.com/users/peers"><div class="icon "><i aria-hidden="true" class="fa fa-users "></i></div><div class="visible-xs">Peers</div></a></li>
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Captain's Logs"><a href="https://intranet.alxswe.com/dashboards/my_captain_log"><div class="icon "><i aria-hidden="true" class="fa fa-book "></i></div><div class="visible-xs">Captain's Logs</div></a></li>
+
+
+<hr class="visible-xs">
+
+<li>
+    <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Slack">
+      <a target="_blank" href="https://alx-students.slack.com/">
+        <div class="image slack">
+          <div class="inner"></div>
+        </div>
+        <div class="visible-xs">Slack</div>
+</a>    </div>
+
+  <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile">
+    <a href="https://intranet.alxswe.com/users/my_profile">
+        <div class="image ">
+          <div class="inner" style="background-image: url('https://s3.amazonaws.com/alx-intranet.hbtn.io/users/photos/000/258/926/thumb/funny_programming_quote_mug-rf9a202676def441f872a8cff1b11f27d_x7jgr_8byvr_324.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230202%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230202T214439Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=ffd36efca322db31ad78113959b1e9dfeb7f5cdd663a884259516393cfd09ccf')"></div>
+        </div>
+
+      <div class="visible-xs">My Profile</div>
+</a>  </div>
+</li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      <div class="hidden-xs navigation sidebar">
+  <a class="logo-container" href="https://intranet.alxswe.com/">
+    <div class="logo"></div>
+</a>
+  <ul>
+    
+
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Planning"><a href="https://intranet.alxswe.com/planning/me"><div class="icon "><i aria-hidden="true" class="fa fa-calendar "></i></div><div class="visible-xs">My Planning</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-current-projects-item" title="" data-original-title="Projects"><a href="https://intranet.alxswe.com/projects/current"><div class="icon "><i aria-hidden="true" class="fa fa-code-fork "></i></div><div class="visible-xs">Projects</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="QA Reviews I can make"><a href="https://intranet.alxswe.com/corrections/to_review"><div class="icon "><i aria-hidden="true" class="fa fa-check "></i></div><div class="visible-xs">QA Reviews I can make</div></a></li>
+    
+    
+
+    <hr title="My resources">
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Curriculums"><a href="https://intranet.alxswe.com/dashboards/my_curriculums"><div class="icon "><i aria-hidden="true" class="fa fa-graduation-cap "></i></div><div class="visible-xs">Curriculums</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-concepts-item" title="" data-original-title="Concepts"><a href="https://intranet.alxswe.com/concepts"><div class="icon "><i aria-hidden="true" class="fa fa-file-text "></i></div><div class="visible-xs">Concepts</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-video-rooms" title="" data-original-title="Conference rooms"><a href="https://intranet.alxswe.com/dashboards/video_rooms"><div class="icon "><i aria-hidden="true" class="fa fa-comments "></i></div><div class="visible-xs">Conference rooms</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Servers"><a href="https://intranet.alxswe.com/servers"><div class="icon "><i aria-hidden="true" class="fa fa-server "></i></div><div class="visible-xs">Servers</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-my-containers" title="" data-original-title="Sandboxes"><a href="https://intranet.alxswe.com/user_containers/current"><div class="icon "><i aria-hidden="true" class="fa fa-terminal "></i></div><div class="visible-xs">Sandboxes</div></a></li>
+    
+    
+
+      <hr title="My campus">
+
+      
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Peers"><a href="https://intranet.alxswe.com/users/peers"><div class="icon "><i aria-hidden="true" class="fa fa-users "></i></div><div class="visible-xs">Peers</div></a></li>
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Captain's Logs"><a href="https://intranet.alxswe.com/dashboards/my_captain_log"><div class="icon "><i aria-hidden="true" class="fa fa-book "></i></div><div class="visible-xs">Captain's Logs</div></a></li>
+
+
+<hr class="visible-xs">
+
+<li>
+    <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Slack">
+      <a target="_blank" href="https://alx-students.slack.com/">
+        <div class="image slack">
+          <div class="inner"></div>
+        </div>
+        <div class="visible-xs">Slack</div>
+</a>    </div>
+
+  <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile">
+    <a href="https://intranet.alxswe.com/users/my_profile">
+        <div class="image ">
+          <div class="inner" style="background-image: url('https://s3.amazonaws.com/alx-intranet.hbtn.io/users/photos/000/258/926/thumb/funny_programming_quote_mug-rf9a202676def441f872a8cff1b11f27d_x7jgr_8byvr_324.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230202%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230202T214439Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=ffd36efca322db31ad78113959b1e9dfeb7f5cdd663a884259516393cfd09ccf')"></div>
+        </div>
+
+      <div class="visible-xs">My Profile</div>
+</a>  </div>
+</li>
+
+
+  </ul>
+</div>
+
+
+    <main>
+        <div id="layout-bars">
+          
+          
+          
+          
+          
+        </div>
+
+      <article class="">
+
+        
+<h1 class="d-flex flex-column gap-2">
+  <span>The Framework</span>
+</h1>
+
+<div>
+  
+</div>
+
+<div class="gap formatted-content">
+    <h2>0. Read</h2>
+
+<p>Read everything pertinent to the question / project at hand.  </p>
+
+<p><br><br>
+<em>Example:</em> Read the project prerequisites, man pages, documentation, books, and articles.  </p>
+
+<p><br><br>
+► Try all the examples in the docs.</p>
+
+<h2>1. Think</h2>
+
+<p>Pause, take a breath, and think of the solution. Make sure you 
+understand all of the required concepts and algorithms before you 
+proceed to solve tasks.</p>
+
+<p><br>
+Once you have found your algorithm or solution - and only then - can you start to code.</p>
+
+<p><br>
+<strong>Repeat:</strong> Do NOT write any piece of code before you have the solution. Coding should only be translating your solution to computer code.</p>
+
+<p><br>
+To think of your solution, try to break things down; a big problem is 
+easier to solve when you break it into smaller, easier problems.</p>
+
+<p><br>
+<em>Example:</em></p>
+
+<p>First, rephrase the problem. “What am I trying to accomplish here?” </p>
+
+<p><br>
+Then, go through different examples: “if I understand correctly, then 
+with this input/context/parameters I should output/print/return/draw/… 
+this”… “What could be the edge cases I have to think about to make sure 
+my function/program will always work correctly and never crash?”</p>
+
+<p><br>
+Next, focus on the basic/regular use cases. “What should my algorithm be?”</p>
+
+<p><br>
+When you found it, try to “run” it through different examples on a 
+whiteboard or pen/paper and see if the input/output match your 
+expectations. </p>
+
+<p><br>
+Finally, once you get that, try to see what changes you have to make to take care of all possible edge cases.</p>
+
+<p><br> 
+► Sometimes, you will be able to “guess” solutions or complete tasks 
+without totally understanding all the concepts, especially if a task is 
+very small. Do NOT do this, because if you do not develop your critical 
+thinking skills with smaller learning opportunities you will not have 
+the ability to solve harder questions. You need to start thinking like 
+an engineer, and this is how to begin. </p>
+
+<p><br> 
+► Use a whiteboard or pen/paper until you are 100% sure your code will work; this maintains focus, and keeps your mind active.</p>
+
+<h2>2. Think more + Whiteboard</h2>
+
+<p>Write or draw out your problem on a whiteboard or paper. It’s easier to visualize your problem when it isn’t pure code.</p>
+
+<p>Can’t find the solution? Patiently think more, it’s out there. Also, ensure you read the resources thoroughly.</p>
+
+<h2>3. Ask why?</h2>
+
+<p>Whether or not your code runs when you input it, make sure you know 
+why it doesn’t (or does) work without looking at the error message.</p>
+
+<p><br>
+You must also understand the vocabulary, concepts, and tools you use, and question why they exist so you ultimately know.</p>
+
+<p><br>
+<em>Example:</em> Let’s imagine we’re doing the bit manipulation project.</p>
+
+<p><br>
+Why do you think this is important? Is it important? Why binary? Where 
+do bits play a role? How is it connected to the machine, memory, bytes 
+and values of types?</p>
+
+<p><br>
+If you haven’t asked and answered those questions, then you did the task wrong.</p>
+
+<p><br>
+Also, if someone comes to you with this question and you don’t have the 
+answer, stop everything and work on answering this question right away.</p>
+
+<p><br>
+This is your future, so ensure you have a strong foundation of understanding.</p>
+
+<p><br> 
+► Never blindly work on tasks without first understanding why it is 
+important to spend time on the topic of the day and how it plays a role 
+in the system or comprehension of CS. Understanding the big picture is 
+very important to your education and future career.</p>
+
+<h2>4. Read the error messages</h2>
+
+<p>Still can’t understand why it doesn’t work? Most of the time, the answer is in the error message.</p>
+
+<h2>5. Google</h2>
+
+<p><br>
+If you still can’t find the solution or understand why your code doesn’t work, google it * </p>
+
+<p><br>
+*error message, specific question, specific concept, etc.</p>
+
+<p><br> 
+► <strong>NEVER TRUST THE INTERNET</strong>.  A lot of the content on 
+the Internet is wrong or incomplete. Always make sure what you are 
+reading does make sense and is correct by challenging and testing every 
+assumption.</p>
+
+<p><br> 
+► You should only google something specific. This step is <strong>NOT</strong> about looking at how to do the project. It should only help answer a specific question or understand a concept.</p>
+
+<p><br> 
+► You are <strong>NOT</strong> allowed to look at the solution / other 
+people’s code. Even for “analysis”. Looking at other people’s code / a 
+solution is considered cheating.</p>
+
+<p><br> 
+► <strong>NEVER</strong> copy and paste something from the Internet. You
+ need to understand everything before you implement something you read. 
+Typing yourself - instead of cp/paste - ensures that you better 
+understand and not miss any details.</p>
+
+<h2>6. Google again</h2>
+
+<p>If you can’t find it, then Google again using more context in your search or by rephrasing your question.</p>
+
+<h2>7. Ask a peer</h2>
+
+<p>If you are still stuck on a problem despite doing the steps above, don’t wait too long before asking to a peer. </p>
+
+<p><br> 
+It is part of your job to ask for help. You are expected to do so, just 
+like you will be expected to do so when you will have a job. </p>
+
+<p><br></p>
+
+<blockquote>
+<p>Repeat: It’s your job to ask and it’s your job to help.</p>
+</blockquote>
+
+<p><br>
+<strong>7.0 If you ask for help</strong></p>
+
+<p><br>
+Respect the time of others. </p>
+
+<p><br>
+Make sure you spent enough time going through previous steps. </p>
+
+<p><br>
+Explain what the problem is and what you tried (i.e. how you followed 
+The Framework). Give as much context as possible; this helps your peers 
+help you, and will prepare you to be an effective software engineer. </p>
+
+<p><br>
+<strong>7.1 If you are asked for help</strong></p>
+
+<p><br>
+Respect every question; there is nothing more demotivating than having 
+someone laughing at your question or being asked “what? you still don’t 
+know that?”</p>
+
+<p><br>
+Do <strong>NOT</strong> touch others’ computers / keyboards. Explain, and let the person who asked for help type and correct their bugs/code.</p>
+
+<p><br>
+Do <strong>NOT</strong> give the final answer. You are here to guide, help them find the solution by themselves.</p>
+
+<p><br>
+Sometimes, you won’t be able to help, but you are still responsible to 
+find someone who can. Stay with the person until it’s resolved. Bonus is
+ that you will also learn how to solve the problem! </p>
+
+<p><br>
+Always start with making sure that the person who is asking for help 
+went through the previous steps by asking “How did you follow The 
+Framework?”. If you help someone without making sure of this, you are 
+NOT helping them.</p>
+
+<p><br>
+When explaining something, always start with whiteboarding the 
+algorithm. Again, coding should come at the end, only to translate the 
+solution to code. When the student understands the solution, then clean 
+the whiteboard, and ask the student to do it again on their own. They 
+need to go step by step from zero to understanding to showcase that they
+ deeply understand.</p>
+
+<p><br>
+Give hints </p>
+
+<p><br>
+<em>Example of hints:</em>
+Try rephrasing the question: “So what you are really looking for is…</p>
+
+<p><br>
+Point to the right documentation: “You should read the manual of this command…”</p>
+
+<p><br>
+Again, coding should come at the end, only to translate the solution to 
+code. When the student understands the solution, then clean the 
+whiteboard, and ask the student to do it again on their own. Repeat 
+until the student can do it.</p>
+
+<p><br> 
+► It’s ok to code it in front of the student and explain the code, BUT 
+then delete the file and ask the student to do it again on their own. 
+Repeat until the student can do it.</p>
+
+<p><br> 
+► There are no stupid questions!</p>
+
+<h2>8. Ask more peers</h2>
+
+<p>If those you’ve asked haven’t had the answer, ask someone else. </p>
+
+<p><br>
+99% of the time, someone knows and has the answer. </p>
+
+<p><br>
+<em>Examples:</em><br>
+Ask several students - from your cohort first, and then from previous 
+cohorts.
+Ask specific, clear questions in your cohort Slack channel, topic 
+specific channels, or reach out to students in other locations. </p>
+
+<p><br> 
+► Different people will have different ways of explaining, since we all 
+communicate differently. If at first you don’t understand, continue to 
+ask others and don’t be discouraged.</p>
+
+<p><br> 
+► Once you understand something on the whiteboard, wipe it and do it 
+again on your own, since you only truly understand when you are able to 
+do it on your own.</p>
+
+<h2>9. Ask your TA</h2>
+
+<p>Each non-inaugural cohort has a dedicated TA. TAs are students from 
+prior cohorts who exemplify peer learning, strong technical skills, and 
+clear communication. They are here (in-person or on Slack) to help. </p>
+
+<p><br> 
+► Remember to go through the previous 9 steps before asking a TA. The 
+first thing that they will ask you is: “How did you follow The 
+Framework?”, and you need to be able to efficiently answer.</p>
+
+<h2>10. Ask other TAs</h2>
+
+<p><br>
+If your TA is unavailable or was unable to find the solution, you can also ask TAs from other cohorts.</p>
+
+<h2>11. Ask Staff/Alumni/Mentors</h2>
+
+<p>If no one up to this point was able to help, ask someone on staff. We are here to help on-site or via Slack!</p>
+
+<p><br>
+If staff cannot help, flesh out your general concerns into specific and 
+actionable questions that you’d not been able to resolve with steps 0-10
+ of The Framework. </p>
+
+<p><br>
+Once you have your list, ask staff for an alum or mentor recommendation of who would be qualified to answer your questions. </p>
+
+<p><br>
+Then, ask the alum/mentors for answers/advice to your specific and actionable questions.</p>
+
+<h2>General Tips:</h2>
+
+<p>Getting a high score is less important than understanding and being able to explain things.</p>
+
+<p><br></p>
+
+<blockquote>
+<p>Always remember one thing: your goal is not to become great students.
+ Your goal is to become great software engineers, because no one wants 
+to hire students.</p>
+</blockquote>
+
+</div>
+
+
+      </article>
+
+      <div class="copyright">Copyright © 2023 ALX, All rights reserved.</div>
+
+    </main>
+
+        <button class="btn btn-primary" id="search-button" data-search-active="false" data-toggle="modal" data-target="#search-modal">
+  <i aria-hidden="true" class="fa fa-search "></i>
+  <i aria-hidden="true" class="fa fa-window-minimize "></i>
+</button>
+
+        <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-labelledby="search-modal-label">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div id="search-bar-container">
+    <input id="search-bar" type="text" name="hbtn-search-bar" placeholder="✨Start search by typing in this field✨">
+</div>
+
+            </div>
+            <div class="modal-body">
+                <div id="modal-spinner" class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div id="search-results-container">
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="modal fade" id="markdownGuideModal" tabindex="-1" role="dialog" aria-labelledby="markdownGuideModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title">Markdown Guide</h4>
+        </div>
+        <div class="modal-body">
+            <h4>Emphasis</h4>
+<pre>**<strong>bold</strong>**
+*<em>italics</em>*
+~~<strike>strikethrough</strike>~~</pre>
+<h4>Headers</h4>
+<pre># Big header
+## Medium header
+### Small header
+#### Tiny header</pre>
+<h4>Lists</h4>
+<pre>* Generic list item
+* Generic list item
+* Generic list item
+
+1. Numbered list item
+2. Numbered list item
+3. Numbered list item</pre>
+<h4>Links</h4>
+<pre>[Text to display](http://www.example.com)</pre>
+<h4>Quotes</h4>
+<pre>&gt; This is a quote.
+&gt; It can span multiple lines!</pre>
+<h4>Images</h4>
+<p>CSS style available: <code>width, height, opacity</code></p>
+<pre>![](http://www.example.com/image.jpg)
+![](http://www.example.com/image.jpg | width: 200px)
+![](http://www.example.com/image.jpg | height: 124px | width: 80px | opacity: 0.6)
+</pre>
+<h4>Tables</h4>
+<pre>| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John     | Doe      | Male     |
+| Mary     | Smith    | Female   |
+
+<em>Or without aligning the columns...</em>
+
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John | Doe | Male |
+| Mary | Smith | Female |
+</pre>
+<h4>Displaying code</h4>
+<pre>`var example = "hello!";`
+
+<em>Or spanning multiple lines...</em>
+
+```
+var example = "hello!";
+alert(example);
+```</pre>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+</body></html>
