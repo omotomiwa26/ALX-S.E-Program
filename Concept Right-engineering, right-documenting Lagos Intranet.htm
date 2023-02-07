@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="google" content="notranslate">
+
+      <script type="text/javascript" async="" src="Concept%20Right-engineering,%20right-documenting%20Lagos%20Intranet_files/js"></script><script async="" src="Concept%20Right-engineering,%20right-documenting%20Lagos%20Intranet_files/gtm.js"></script><script>
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({"userId":258926,"visitorType":"student","batch":{"id":65,"fullNameWithC":"LOS-0123 (C#12)","schoolLocation":{"id":3,"name":"Lagos"}},"curriculum":{"id":1,"name":"Foundations"}});
+
+    window.gtm_user_custom_event = function (name, options) {
+      if (typeof name === 'undefined') {
+        return;
+      }
+
+      window.dataLayer.push({
+        customEventOptions: typeof options !== 'undefined' ? options : {},
+        event: name,
+      });
+    }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N4C8MF2');</script>
+  <!-- End Google Tag Manager -->
+
+
+    <title>Concept: Right-engineering, right-documenting | Lagos Intranet</title>
+
+      <link rel="stylesheet" href="Concept%20Right-engineering,%20right-documenting%20Lagos%20Intranet_files/xgz4ilr.css">
+      <link rel="stylesheet" media="all" href="Concept%20Right-engineering,%20right-documenting%20Lagos%20Intranet_files/application_alx-e8838960a431efe7da7f5c95f98f095fea27669b6c60.css">
+      <script src="Concept%20Right-engineering,%20right-documenting%20Lagos%20Intranet_files/loader.js"></script>
+      <script src="Concept%20Right-engineering,%20right-documenting%20Lagos%20Intranet_files/application-d6aae7f7853f92b7c29b12f8d839da6ba98c61e2d3a4c5d3d.js"></script>
+      <link rel="shortcut icon" type="image/x-icon" href="https://intranet.alxswe.com/favicon_alx.ico">
+      <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="6iPbyK7aglr3yEGmOsk0RT-7pcEX9Ukxem_KJTWJ5pxly_YYFQmkVk5D394LQc0j8uWqKmz0EVJuIR95oBXLXQ">
+
+      <link rel="apple-touch-icon" href="https://intranet.alxswe.com/apple-touch-icon_alx.png">
+
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <!-- Store user timezone -->
+      <script>
+        Cookies.set('timezone', (new Date()).getTimezoneOffset() / -60.0);
+      </script>
+
+      <!-- intro.js for interactive onboarding -->
+
+      <!-- React -->
+      <script src="Concept%20Right-engineering,%20right-documenting%20Lagos%20Intranet_files/application-f96fd86efca75a5a2930.js"></script>
+      <link rel="stylesheet" media="screen" href="Concept%20Right-engineering,%20right-documenting%20Lagos%20Intranet_files/application-87456da7.css">
+  </head>
+
+  <body class="signed_in env_production notranslate" translate="no" data-theme-suffix="_alx">
+      <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4C8MF2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+      <input type="hidden" id="hbtn-slack-url" value="https://alx-students.slack.com">
+      <nav class="navbar navbar-default navbar-fixed-top topbar visible-xs">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-mobile" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <a class="navbar-brand" href="https://intranet.alxswe.com/">
+      <div class="logo"></div>
+</a>  </div>
+
+  <div class="collapse navbar-collapse navigation" id="navbar-mobile">
+    <ul class="nav navbar-nav">
+      
+
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Planning"><a href="https://intranet.alxswe.com/planning/me"><div class="icon "><i aria-hidden="true" class="fa fa-calendar "></i></div><div class="visible-xs">My Planning</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-current-projects-item" title="" data-original-title="Projects"><a href="https://intranet.alxswe.com/projects/current"><div class="icon "><i aria-hidden="true" class="fa fa-code-fork "></i></div><div class="visible-xs">Projects</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="QA Reviews I can make"><a href="https://intranet.alxswe.com/corrections/to_review"><div class="icon "><i aria-hidden="true" class="fa fa-check "></i></div><div class="visible-xs">QA Reviews I can make</div></a></li>
+    
+    
+
+    <hr title="My resources">
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Curriculums"><a href="https://intranet.alxswe.com/dashboards/my_curriculums"><div class="icon "><i aria-hidden="true" class="fa fa-graduation-cap "></i></div><div class="visible-xs">Curriculums</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-concepts-item" title="" data-original-title="Concepts"><a href="https://intranet.alxswe.com/concepts"><div class="icon "><i aria-hidden="true" class="fa fa-file-text "></i></div><div class="visible-xs">Concepts</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-video-rooms" title="" data-original-title="Conference rooms"><a href="https://intranet.alxswe.com/dashboards/video_rooms"><div class="icon "><i aria-hidden="true" class="fa fa-comments "></i></div><div class="visible-xs">Conference rooms</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Servers"><a href="https://intranet.alxswe.com/servers"><div class="icon "><i aria-hidden="true" class="fa fa-server "></i></div><div class="visible-xs">Servers</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-my-containers" title="" data-original-title="Sandboxes"><a href="https://intranet.alxswe.com/user_containers/current"><div class="icon "><i aria-hidden="true" class="fa fa-terminal "></i></div><div class="visible-xs">Sandboxes</div></a></li>
+    
+    
+
+      <hr title="My campus">
+
+      
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Peers"><a href="https://intranet.alxswe.com/users/peers"><div class="icon "><i aria-hidden="true" class="fa fa-users "></i></div><div class="visible-xs">Peers</div></a></li>
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Captain's Logs"><a href="https://intranet.alxswe.com/dashboards/my_captain_log"><div class="icon "><i aria-hidden="true" class="fa fa-book "></i></div><div class="visible-xs">Captain's Logs</div></a></li>
+
+
+<hr class="visible-xs">
+
+<li>
+    <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Slack">
+      <a target="_blank" href="https://alx-students.slack.com/">
+        <div class="image slack">
+          <div class="inner"></div>
+        </div>
+        <div class="visible-xs">Slack</div>
+</a>    </div>
+
+  <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile">
+    <a href="https://intranet.alxswe.com/users/my_profile">
+        <div class="image ">
+          <div class="inner" style="background-image: url('https://s3.amazonaws.com/alx-intranet.hbtn.io/users/photos/000/258/926/thumb/funny_programming_quote_mug-rf9a202676def441f872a8cff1b11f27d_x7jgr_8byvr_324.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230207%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230207T103350Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=da62f59c64b29d056ea2c67a9a59fe9570f17a7e059c6d2f1f61de5621220ce1')"></div>
+        </div>
+
+      <div class="visible-xs">My Profile</div>
+</a>  </div>
+</li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      <div class="hidden-xs navigation sidebar">
+  <a class="logo-container" href="https://intranet.alxswe.com/">
+    <div class="logo"></div>
+</a>
+  <ul>
+    
+
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Planning"><a href="https://intranet.alxswe.com/planning/me"><div class="icon "><i aria-hidden="true" class="fa fa-calendar "></i></div><div class="visible-xs">My Planning</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-current-projects-item" title="" data-original-title="Projects"><a href="https://intranet.alxswe.com/projects/current"><div class="icon "><i aria-hidden="true" class="fa fa-code-fork "></i></div><div class="visible-xs">Projects</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="QA Reviews I can make"><a href="https://intranet.alxswe.com/corrections/to_review"><div class="icon "><i aria-hidden="true" class="fa fa-check "></i></div><div class="visible-xs">QA Reviews I can make</div></a></li>
+    
+    
+
+    <hr title="My resources">
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Curriculums"><a href="https://intranet.alxswe.com/dashboards/my_curriculums"><div class="icon "><i aria-hidden="true" class="fa fa-graduation-cap "></i></div><div class="visible-xs">Curriculums</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-concepts-item" title="" data-original-title="Concepts"><a href="https://intranet.alxswe.com/concepts"><div class="icon "><i aria-hidden="true" class="fa fa-file-text "></i></div><div class="visible-xs">Concepts</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-video-rooms" title="" data-original-title="Conference rooms"><a href="https://intranet.alxswe.com/dashboards/video_rooms"><div class="icon "><i aria-hidden="true" class="fa fa-comments "></i></div><div class="visible-xs">Conference rooms</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Servers"><a href="https://intranet.alxswe.com/servers"><div class="icon "><i aria-hidden="true" class="fa fa-server "></i></div><div class="visible-xs">Servers</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-my-containers" title="" data-original-title="Sandboxes"><a href="https://intranet.alxswe.com/user_containers/current"><div class="icon "><i aria-hidden="true" class="fa fa-terminal "></i></div><div class="visible-xs">Sandboxes</div></a></li>
+    
+    
+
+      <hr title="My campus">
+
+      
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Peers"><a href="https://intranet.alxswe.com/users/peers"><div class="icon "><i aria-hidden="true" class="fa fa-users "></i></div><div class="visible-xs">Peers</div></a></li>
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Captain's Logs"><a href="https://intranet.alxswe.com/dashboards/my_captain_log"><div class="icon "><i aria-hidden="true" class="fa fa-book "></i></div><div class="visible-xs">Captain's Logs</div></a></li>
+
+
+<hr class="visible-xs">
+
+<li>
+    <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Slack">
+      <a target="_blank" href="https://alx-students.slack.com/">
+        <div class="image slack">
+          <div class="inner"></div>
+        </div>
+        <div class="visible-xs">Slack</div>
+</a>    </div>
+
+  <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile">
+    <a href="https://intranet.alxswe.com/users/my_profile">
+        <div class="image ">
+          <div class="inner" style="background-image: url('https://s3.amazonaws.com/alx-intranet.hbtn.io/users/photos/000/258/926/thumb/funny_programming_quote_mug-rf9a202676def441f872a8cff1b11f27d_x7jgr_8byvr_324.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230207%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230207T103350Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=da62f59c64b29d056ea2c67a9a59fe9570f17a7e059c6d2f1f61de5621220ce1')"></div>
+        </div>
+
+      <div class="visible-xs">My Profile</div>
+</a>  </div>
+</li>
+
+
+  </ul>
+</div>
+
+
+    <main>
+        <div id="layout-bars">
+          
+          
+          
+          
+          
+        </div>
+
+      <article class="">
+
+        
+<h1 class="d-flex flex-column gap-2">
+  <span>Right-engineering, right-documenting</span>
+</h1>
+
+<div>
+  
+</div>
+
+<div class="gap formatted-content">
+    <p>You will often be told that software engineers have a tendency to
+ under-document, and to over-engineer; but truth be told, you also find 
+cases where engineers have over-documented, or under-engineered, and 
+it’s equally damaging. While a lot about it is very subjective, and 
+there is no single right level of documentation or engineering, there 
+are key landmarks to keep in mind.</p>
+
+<h2>Right-documenting</h2>
+
+<p>On my first week at Apple, I was appalled when I heard: “We don’t 
+document our applications here, it is simply part of the Apple culture”.
+ At first, I thought I was simply talking with a particularly lazy team 
+who made up some excuse, but it was echoed a few weeks later with a post
+ on Apple Web (the main internal portal) by Apple University (the team 
+in charge of studying and evangelizing internally about Apple’s 
+culture). It couldn’t get much more official than that.
+I was very intrigued, so I asked around, and I came to understand that 
+it was a lot like most company culture items in every company: it was 
+not entirely true, but more designed to prevent people from doing too 
+much of the opposite. Since they had noticed that over-documentation 
+could often be in the way of flexible innovation, and that they worry so
+ much about innovation, they were willing to have more of the downsides 
+of under-documenting (people doing duplicate work without knowing, 
+application running and no one knows how they work), rather then the 
+opposite.</p>
+
+<h3>Items of documentation</h3>
+
+<p>You will often hear it said that a developer doesn’t write code for a
+ computer, but primarily for another developer to read it. Assume that a
+ developer who knows nothing about the decisions you made on your 
+project, and what you were trying to do, will take it over and need to 
+understand it. What can you do today to help them get up to speed 
+efficiently? Here’s the killer motivation: more often than not, that 
+developer is actually you, months from now, after working on many other 
+projects and forgetting all about the decisions you had made. Just like 
+every developer, you will reach that moment where you hate your past 
+self for not having documented better.
+You can consider anything that helps that future developer understand 
+your decisions and get into your code is an item of documentation, such 
+as:</p>
+
+<ul>
+<li>The most obvious: <strong>architectural documentation</strong> , 
+documenting the most high-level choices you made. It shouldn’t 
+necessarily contain any code, but should simply explain in the most 
+concise and digestible way possible some of the choices that will allow 
+to understand how the code is organized.</li>
+<li><strong>Comments</strong> are your best way to document what the code is doing at a narrower level:
+
+<ul>
+<li>Comments to describe your functions (even more so if your code is 
+meant to be reused by other people): you may want to look into the 
+syntaxes that are conventional in the language you’re using. There might
+ be documentation generators using the comments if they’re input 
+properly.</li>
+<li>Comments inside functions: they should be short and descriptive 
+enough that when a developer browses through the code reading only those
+ comments, they understand what each step is, and the whole sequence of 
+what happens.</li>
+</ul></li>
+</ul>
+
+<p><img src="Concept%20Right-engineering,%20right-documenting%20Lagos%20Intranet_files/right_documenting_comments.png" alt="" loading="lazy" style="">
+<em>This piece of code is part of the automated review system; it 
+receives the results and saves them in the intranet’s 
+database,&nbsp;after&nbsp;some processing. Since the code here 
+manipulates data in a way that is hard to read back later, I had been 
+especially explicit in the comments about what each bit is doing, 
+without needing to read anything of the code. (I swear I didn’t edit 
+anything for the sake of this screenshot!)</em></p>
+
+<ul>
+<li><strong>Names of functions and variables</strong> should represent 
+what they’re about without ambiguity. If it would be too long to explain
+ for the size of a variable name, add a comment before the line where 
+you created it, to explain what it is (the next developer, not 
+understanding what it is, will naturally try to find where it was 
+created to try to figure out where it comes from).</li>
+<li><strong>Indentation</strong> &nbsp;of the code&nbsp;must&nbsp;be 
+properly&nbsp;achieved,&nbsp;so&nbsp;that&nbsp;if&nbsp;the&nbsp;comment&nbsp;and&nbsp;name
+ functions&nbsp;are&nbsp;not&nbsp;explicit&nbsp;enough&nbsp;for 
+what&nbsp;the developer 
+needs&nbsp;to&nbsp;know,&nbsp;they&nbsp;can&nbsp;dive&nbsp;into&nbsp;the&nbsp;code&nbsp;in&nbsp;the
+ most&nbsp;readable&nbsp;way&nbsp;possible.</li>
+<li>The <strong>Git commit messages</strong> , so that a developer who is trying to figure out the chronology of events will at a glance.</li>
+<li>Always put <strong>a <code>README.md</code> file</strong> in your 
+project. It’s even more relevant as you’ll push your projects on GitHub,
+ since that’s what GitHub displays on your project’s homepage. A <code>README.md</code>
+ file is like the about page of your project, introducing newcomers to 
+what it’s about, how to set it up, its licence information, the process 
+people must follow to contribute to it, … To be clear: you don’t have to
+ have a full README file for every little project you work on, but you 
+should definitely have one for longer projects.</li>
+</ul>
+
+<h3>Symptoms and risks of over-documenting</h3>
+
+<ul>
+<li>Don’t document the tools you use. Rule of thumb: if some information
+ that is in the documentation is findable online, it doesn’t belong in 
+your documentation.</li>
+<li>Getting into the project is hard, because it takes more than 10 minutes to read the documentation to get started.</li>
+<li>It takes more than 30 seconds / 1 minute to search for the right 
+specific information about anything, even when knowing where to look.</li>
+<li><p>Making a change is complex, because you have to ensure that the 
+various places where things are documented are up to date. Resulting 
+risks could be:</p></li>
+<li><p>people avoid making changes so that they don’t have to worry 
+about finding what to update in the documentation (the thing that Apple 
+feared);</p></li>
+<li><p>because it’s too complex, people don’t bother updating the 
+documentation, or fail to change something relevant in the 
+documentation, which gradually turns outdated.</p></li>
+</ul>
+
+<h3>Symptoms and risks of under-documenting</h3>
+
+<ul>
+<li>Take some time to try and pretend wiping your brain and knowledge 
+about the project, and having to learn everything from scratch about how
+ it’s made. Write your documentation for the person you are when you do 
+that.</li>
+<li>Even great code, when uncommented, looks like code spaghetti when 
+you look at it first, and it’s very hard and time-consuming to take 
+one’s first steps into it.</li>
+<li>If you make your code open-source, no one will take the time to 
+understand your code if it’s not well-documented, and what could have 
+been a great open-source project will stall before even existing.</li>
+<li>That one day of the year when you’re home with the flu, and your 
+brain doesn’t work right, you’re going to be very happy that when your 
+coworker contacts you with a blocking issue and asks you how the heck 
+this gets fixed, you’re able to just reply “RTFM”, turn Netflix off, and
+ doze off a bit.</li>
+<li>Also, in a larger company where it’s likely that several teams might
+ need to build similar things, not documenting or communicating about 
+what you’re building could mean that someone will redo it entirely from 
+scratch while they could simply have used what you built. The opposite 
+may happen: you suddenly realize that the thing you’ve been working on 
+had already been done by someone else who never told anyone.</li>
+</ul>
+
+<h2>Right-engineering</h2>
+
+<p>Gauging a level of engineering has a lot to do with planning for the 
+future, avoiding&nbsp;to&nbsp;over-complicate&nbsp;things,&nbsp;and also
+ sometimes&nbsp;with levels of abstraction.</p>
+
+<p>Let’s take a step back with a nice physical-world allegory.</p>
+
+<p>Let’s say that you are trying to accomplish a task, which is: sending 10 tennis balls into a basket.
+Here are two extreme possibilities to handle the issue:</p>
+
+<ol>
+<li>either you’re doing it in the most naive way, grab a tennis ball, 
+throw it in the basket, start over 9 times with the other balls.</li>
+<li>or, you’re building a small catapult, smart enough that when you 
+push a button, it will grab the first ball by itself, throw it exactly 
+right, grab the second one, etc, with no need for you to intervene.
+The next day, you’re being told that you have to throw 10 golf balls. If
+ you took the first path, that’s simple enough: grab the first golf 
+ball, throw it, repeat. But if you used the catapult, you’re at a loss: 
+your catapult was built for balls that weigh the same as a tennis ball, 
+not a golf ball. You must reconstruct a new catapult from scratch.
+By abstracting how an object is thrown as much as you could, without 
+consideration with things that were likely to need to be done in the 
+future, you’ve over-engineered your system with your smart catapult, and
+ now it’s unusable.</li>
+</ol>
+
+<p>The next day, you’re being told that you now have to throw 100 tennis
+ balls, and 100 golf balls. If you’ve been a catapult builder, you’re 
+happy: give all of those to both your catapults, and they’ll manage 
+everything for you. If you’ve been a thrower, you must be freaking out: 
+because you haven’t tried to abstract how an object gets thrown, and 
+therefore have under engineered your system, you now have to do 
+everything in a way that is impractical.</p>
+
+<p>Once you are very familiar with a technology, you will tend to over 
+engineer things more, because one feels smart doing that, and throwing 
+10 tennis balls sounds annoying. Advanced developers tend to come up 
+with systems that are so elegant for their use case, that it will be 
+very hard to change it for the future use cases. To make the right 
+decision about level of engineering, there is a tradeoff to find about 
+keeping things simple so that they keep flexible, and making things 
+engineered enough that are well-maintainable.</p>
+
+<p>Here are a few nice links about over engineering:</p>
+
+<ul>
+<li><a href="https://intranet.alxswe.com/rltoken/8w0-U0qABdZI69yYmYwdAg" title="http://www.codesimplicity.com/post/what-is-overengineering/" target="_blank">http://www.codesimplicity.com/post/what-is-overengineering/</a></li>
+<li><a href="https://intranet.alxswe.com/rltoken/RxXLGR-n1j50Svgaqs6RZw" title="https://coderoom.wordpress.com/2010/06/23/criminal-overengineering/" target="_blank">https://coderoom.wordpress.com/2010/06/23/criminal-overengineering/</a>&nbsp;(has a technical bit&nbsp;around the beginning)</li>
+</ul>
+
+</div>
+
+
+      </article>
+
+      <div class="copyright">Copyright © 2023 ALX, All rights reserved.</div>
+
+    </main>
+
+        <button class="btn btn-primary" id="search-button" data-search-active="false" data-toggle="modal" data-target="#search-modal">
+  <i aria-hidden="true" class="fa fa-search "></i>
+  <i aria-hidden="true" class="fa fa-window-minimize "></i>
+</button>
+
+        <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-labelledby="search-modal-label">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div id="search-bar-container">
+    <input id="search-bar" type="text" name="hbtn-search-bar" placeholder="✨Start search by typing in this field✨">
+</div>
+
+            </div>
+            <div class="modal-body">
+                <div id="modal-spinner" class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div id="search-results-container">
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="modal fade" id="markdownGuideModal" tabindex="-1" role="dialog" aria-labelledby="markdownGuideModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title">Markdown Guide</h4>
+        </div>
+        <div class="modal-body">
+            <h4>Emphasis</h4>
+<pre>**<strong>bold</strong>**
+*<em>italics</em>*
+~~<strike>strikethrough</strike>~~</pre>
+<h4>Headers</h4>
+<pre># Big header
+## Medium header
+### Small header
+#### Tiny header</pre>
+<h4>Lists</h4>
+<pre>* Generic list item
+* Generic list item
+* Generic list item
+
+1. Numbered list item
+2. Numbered list item
+3. Numbered list item</pre>
+<h4>Links</h4>
+<pre>[Text to display](http://www.example.com)</pre>
+<h4>Quotes</h4>
+<pre>&gt; This is a quote.
+&gt; It can span multiple lines!</pre>
+<h4>Images</h4>
+<p>CSS style available: <code>width, height, opacity</code></p>
+<pre>![](http://www.example.com/image.jpg)
+![](http://www.example.com/image.jpg | width: 200px)
+![](http://www.example.com/image.jpg | height: 124px | width: 80px | opacity: 0.6)
+</pre>
+<h4>Tables</h4>
+<pre>| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John     | Doe      | Male     |
+| Mary     | Smith    | Female   |
+
+<em>Or without aligning the columns...</em>
+
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John | Doe | Male |
+| Mary | Smith | Female |
+</pre>
+<h4>Displaying code</h4>
+<pre>`var example = "hello!";`
+
+<em>Or spanning multiple lines...</em>
+
+```
+var example = "hello!";
+alert(example);
+```</pre>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+</body></html>

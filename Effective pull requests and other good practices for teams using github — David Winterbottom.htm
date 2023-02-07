@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="en"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        
+<script async="" src="Effective%20pull%20requests%20and%20other%20good%20practices%20for%20teams%20using%20github%20%E2%80%94%20David%20Winterbottom_files/analytics.js"></script><script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-3494213-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+        
+        <style class="anchorjs"></style><link rel="stylesheet" href="Effective%20pull%20requests%20and%20other%20good%20practices%20for%20teams%20using%20github%20%E2%80%94%20David%20Winterbottom_files/main.min.css">
+
+        
+        <link rel="alternate" href="https://codeinthehole.com/index.xml" type="application/rss+xml" title="David Winterbottom">
+
+        
+        <link href="Effective%20pull%20requests%20and%20other%20good%20practices%20for%20teams%20using%20github%20%E2%80%94%20David%20Winterbottom_files/css.css" rel="stylesheet" type="text/css">
+
+        
+        
+        <title>Effective pull requests and other good practices for teams using github — David Winterbottom</title>
+
+        <meta name="author" content="David Winterbottom">
+        <meta name="description" content="Notes from an internal git workshop">
+
+    </head>
+
+    <body>
+
+        <article class="hentry" id="container">
+
+<header>
+    <div id="article_nav">
+        <h5>
+            <a href="https://codeinthehole.com/">home</a> | 
+            <a href="https://codeinthehole.com/writing/">writing</a> | 
+            <a href="https://til.codeinthehole.com/">TIL</a> | 
+            <span class="desktop_only"><a href="https://codeinthehole.com/now/">now</a> |</span>
+            <a href="https://codeinthehole.com/about/">about</a>
+        </h5>
+    </div>
+</header>
+
+
+
+<div id="main" role="main">
+
+    <div id="content" class="article">
+
+        <h1 id="article_title" class="entry-title">Effective pull requests and other good practices for teams using github</h1>
+
+        <div class="byline desktop_only">
+            by <a href="https://codeinthehole.com/about/" class="author vcard">David Winterbottom</a>
+            on <time class="published" datetime="">Saturday, 20 October 2012</time>
+        </div>
+        <div class="byline mobile_only">
+            by <a href="https://codeinthehole.com/about/" class="author vcard">David Winterbottom</a><br>
+            <span class="article_date">on <time class="published" datetime="">Saturday, 20 October 2012</time></span>
+        </div>
+
+        <div id="article_content" class="entry-content">
+            <p>I work at <a href="http://www.tangentlabs.co.uk/">an agency</a> where we pay $200 a month to
+Github for their <a href="https://github.com/plans">platinum plan</a>. This article is a
+summary of an internal talk I gave on making the most of our subscription.</p>
+<p>There’s nothing original here: it’s just a collection of tips that I’ve
+harvested over the last few years. I’m publishing this article mainly so I have
+something to refer future employees to.</p>
+<h2 id="use-pull-requests">Use pull requests<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#use-pull-requests" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+<p>Pull requests are an excellent tool for fostering code review. If you’re using
+Github for team projects, you should be using these extensively.</p>
+<p>Many people don’t realise that you can make pull requests between two branches
+of the same repository (the so-called
+<a href="https://help.github.com/articles/using-pull-requests">“shared repository model”</a>).
+For team projects, this is preferable over the “fork and pull” model because
+it’s simpler: there are less branches and remotes to keep track of.</p>
+<p>A good practice is for someone else to merge your code into the mainline,
+ensuring 2 sets of eyeballs review each feature. This is simple to organise when
+working in pairs, but in larger teams you may need a system for determining who
+reviews what.</p>
+<h3 id="sample-workflow">Sample workflow<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#sample-workflow" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<p>Here’s a sample workflow demonstrating the use of pull requests.</p>
+<h4 id="work-on-a-story">Work on a story<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#work-on-a-story" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+<p>Create a new branch for the current story you are working on:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>master<span style="color:#f92672">)</span> $ git checkout -b feature/masquerading
+</span></span></code></pre></div><p>It’s important to use a new branch for pull requests for several reasons:</p>
+<ul>
+<li>It allows you to submit multiple pull requests without confusion. The
+classical Github gotcha is to continue committing to a pull request branch
+after making the initial request. When these commits are pushed to the remote,
+they will become part of the original pull request which often ends up
+conflating unrelated functionality.</li>
+<li>When your pull request is merged into the target branch, the maintainer may
+decide to rebase your commits to avoid a merge commit, or to squash the
+commits into a single coherent commit. If your pull request was from your
+‘master’ branch, you will encounter problems when merging the target branch
+back into your own ‘master’. Using a temporary branch means it can be
+discarded once the pull request is accepted and it doesn’t matter that your
+history was rewritten.</li>
+</ul>
+<p>Make changes, run tests, commit etc.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>feature/masquerading<span style="color:#f92672">)</span> $ vim
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>feature/masquerading<span style="color:#f92672">)</span> $ git commit
+</span></span></code></pre></div><h4 id="ask-for-feedback">Ask for feedback<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#ask-for-feedback" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+<p>If it’s a significant or difficult story, you may be unsure if you’re on the
+right track. You could ask for some feedback now by pushing your commits to the
+remote for others to review:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>feature/masquerading<span style="color:#f92672">)</span> $ git push -u origin feature/masquerading
+</span></span></code></pre></div><p>The <code>-u</code> option adds an upstream tracking reference to your local branch,
+meaning that you can run push subsequent commits using <code>git push</code> without having
+to specify the remote and branch names (and run <code>git pull</code> without additional
+arguments).</p>
+<p>Now ask for feedback on your project mailing list by circulating either a link
+to the branch, or a compare view URL. You can use the excellent
+<a href="http://defunkt.io/hub/">hub</a> to easily generate compare URLs for sharing:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>master<span style="color:#f92672">)</span> $ git compare master..feature/masquerading
+</span></span></code></pre></div><p>This will open your default browser on the compare URL, which you can then copy
+into an email.</p>
+<p>Your fellow developers can now comment either on your commits at line-level, or
+make more general comments by replying to the mailing list thread.</p>
+<h4 id="submit-pull-request">Submit pull request<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#submit-pull-request" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+<p>After digesting your co-workers’ comments, you adjust your approach and make
+some further commits to your branch.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>feature/masquerading<span style="color:#f92672">)</span> $ vim
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>feature/masquerading<span style="color:#f92672">)</span> $ git commit
+</span></span></code></pre></div><p>When the story is complete, push your new commits to the remote:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>feature/masquerading<span style="color:#f92672">)</span> $ git push
+</span></span></code></pre></div><p>and use the Github site to create a pull request. A couple of things to be aware
+of:</p>
+<ul>
+<li>Make sure the destination branch is correct, it may not always be ‘master’. If
+you’re using git-flow or similar, the appropriate destination branch may be
+‘develop’ or a release branch.</li>
+<li>Use Github’s preview facilties to ensure the pull request is well structured
+and clear. The description should explain what the pull request contains as
+well as the thinking behind it. For reference, have a look at this
+<a href="https://github.com/bitly/dablooms/pull/19">excellent pull request</a>.</li>
+</ul>
+<p>Once the pull request is created, you should find someone on your team to review
+it and send them a link to the request using the project mailing list so anyone
+else with an interest can take a look.</p>
+<h4 id="code-review">Code review<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#code-review" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+<p>Others can now review your branch, make comments on individual lines or on the
+pull request as a whole: the same process as when you pushed some commits for
+review earlier.</p>
+<p>It’s also possible for others to add commits to the pull request by pushing to
+the same branch:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>master<span style="color:#f92672">)</span> $ git fetch origin
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>master<span style="color:#f92672">)</span> $ git checkout feature/masquerading
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>feature/masquerading<span style="color:#f92672">)</span> $ vim
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>feature/masquerading<span style="color:#f92672">)</span> $ git add .
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>feature/masquerading<span style="color:#f92672">)</span> $ git commit
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>feature/masquerading<span style="color:#f92672">)</span> $ git push origin feature/masquerading
+</span></span></code></pre></div><p>Iterate this way until the branch is ready to be merged.</p>
+<div class="admonition warning">
+    Github easter egg: add <code>?w=0</code> to diff URLs (eg a commit, compare view or
+    pull request) to ignore whitespace.
+</div>
+<h4 id="cleaning-your-history-optional">Cleaning your history (optional)<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#cleaning-your-history-optional" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+<p>When you’re ready to merge, you should first clean up the feature branch.</p>
+<p>If there are any commits on the destination branch that aren’t on your feature
+branch then you should rebase to avoid a merge commit. You can check for such
+commits using:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>feature/masquerading<span style="color:#f92672">)</span> $ git log ..master
+</span></span></code></pre></div><p>This shows all commits on ‘master’ that aren’t in your current branch history.
+If you see any commits here, then rebase the feature branch using:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>feature/masquerading<span style="color:#f92672">)</span> $ git rebase master
+</span></span></code></pre></div><p>This replays your commits on top of the new commits from the destination branch
+so that the merge can be a ‘fast-forward’.</p>
+<div class="admonition warning">
+    Hang on! Aren't you rewriting history that has been pushed?
+    Yes - that's true. However, when the remote branch is <em>temporary</em> as for
+    a pull request, this is ok (as far as I can tell). The pull request
+    branch should be deleted once it has been merged and so it shouldn't
+    matter that its history is being rewritten before merging.
+</div>
+<p>Next, it may be desirable to squash your commits into larger cohesive commits.
+You can do this using an ‘interactive’ rebase:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>feature/masquerading<span style="color:#f92672">)</span> $ git rebase -i master
+</span></span></code></pre></div><p>This will open <code>$EDITOR</code> with all commits since ‘master’ listed. You can then
+reorder and squash these commits, as well as rewording the commit messages. Be
+careful, this can become quite addictive.</p>
+<p>One thing you can do is adjust the final commit message on your feature branch
+to close the pull request automatically. Simply add ‘Fixes #123’ (using the ID
+from the pull request URL) at the bottom of the message.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>feature/masquerading<span style="color:#f92672">)</span> $ git commit --amend
+</span></span></code></pre></div><p>Further reading:</p>
+<ul>
+<li><a href="https://github.com/blog/831-issues-2-0-the-next-generation">Github issues 2.0: The Next Generation</a> -
+An overview of Github issues with an explanation of how to close, reopen and
+reference pull requests from within commit messages.</li>
+<li><a href="http://learn.github.com/p/rebasing.html">Github help: Rebasing</a></li>
+<li><a href="https://help.github.com/articles/interactive-rebase">Github help: Interactive rebasing</a></li>
+</ul>
+<h4 id="merging">Merging<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#merging" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+<p>Finally, you can merge your cleaned-up feature branch with a fast-forward merge:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>feature/masquerading<span style="color:#f92672">)</span> $ git checkout master
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>master<span style="color:#f92672">)</span> $ git merge feature/masquerading
+</span></span></code></pre></div><p>Alternatively, you can force a merge commit to keep track of which commits came
+from the feature branch.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>feature/masquerading<span style="color:#f92672">)</span> $ git checkout master
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>master<span style="color:#f92672">)</span> $ git merge --no-ff feature/masquerading
+</span></span></code></pre></div><p>When you view the your history as a graph, you will be able to tell which
+commits were from the feature branch.</p>
+<p>Now delete the local and remote feature branches:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>master<span style="color:#f92672">)</span> $ git branch -D feature/masquerading
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>master<span style="color:#f92672">)</span> $ git push origin :feature/masquerading
+</span></span></code></pre></div><p>Further reading:</p>
+<ul>
+<li><a href="https://help.github.com/articles/using-pull-requests">Using pull requests</a></li>
+</ul>
+<h2 id="other-good-practices">Other good practices<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#other-good-practices" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+<h3 id="care-about-your-history">Care about your history<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#care-about-your-history" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<p>Strive for a clean, coherent history. Write
+<a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">good commit messages</a>,
+adhering to the 50 char summary followed by a longer description. Avoid
+unneccessary merge commits as they clutter up your history.</p>
+<p>As we saw above, if you haven’t pushed your branch to a stable remote branch,
+you can rewrite it:</p>
+<ul>
+<li>Use <code>git rebase</code> to rebase your feature branch against the branch you intend
+to merge into. This means that when you merge, it will be a so-called ‘fast
+forward’ merge which avoids a merge commit.</li>
+<li>Use <code>git rebase -i</code> to rewrite your branch history, squashing related commits,
+rewording commit messages.</li>
+</ul>
+<h3 id="build-an-audit-trail">Build an audit trail<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#build-an-audit-trail" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<p>Try and build a good audit trail - your future self will be grateful. Where
+possible cross-reference other resources in your commit messages. These could
+be:</p>
+<ul>
+<li>Github pull requests or issues (eg “Related to #123”)</li>
+<li>Mailing-list threads that discuss the work in question (try and use mailing
+list software that lets you link to a discussion). If you use Basecamp or
+something similar, link to the relevant discussion.</li>
+<li>Articles or blog posts relevant to your work</li>
+</ul>
+<p>Basically anything that might be useful 12 months later when you’re trying to
+work out the reasoning behind some component.</p>
+<p>One thing, I try to do with
+<a href="https://github.com/tangentlabs/django-oscar">django-oscar</a> (a project of mine)
+is to maintain an audit trail from a commit all the way back to the mailing list
+discussion that instigated it. This works as follows:</p>
+<ul>
+<li>If you’re puzzled by a particular line within a file, use <code>git blame</code> to find
+the commit that introduced it.</li>
+<li>The commit message should explain the change that led to this line and link
+back to a pull request.</li>
+<li>The pull request should be a set of related commits that together implement a
+new feature. The pull request description should be a functional spec for the
+feature in question, together with a link to the mailing list thread where
+this feature was discussed.</li>
+</ul>
+<p>I haven’t been following this process for long, but it seems to work well.</p>
+<h3 id="use-your-prompt">Use your prompt<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#use-your-prompt" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<p>Put relevant git information into your prompt - this will make your life easier.
+Here’s a bash snippet for adding the current git branch to your prompt:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># ~/.bashrc</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> parse_git_branch <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    git branch --no-color 2&gt; /dev/null | sed -e <span style="color:#e6db74">'/^[^*]/d'</span> -e <span style="color:#e6db74">'s/* \(.*\)/(\1) /'</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>PS1<span style="color:#f92672">=</span><span style="color:#e6db74">"\[\e[32m\]\$(parse_git_branch)\[\e[34m\]\h:\W \$ \[\e[m\]"</span>
+</span></span><span style="display:flex;"><span>export PS1
+</span></span></code></pre></div><h3 id="use-aliases-for-speed">Use aliases for speed<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#use-aliases-for-speed" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<p>Strive to be as productive as possible at the commandline. For me, that means
+minimising key strokes.</p>
+<p>With git, you can define both git- and bash-aliases to make your life easier. I
+have lots (listed below). Two are worth highlighting:</p>
+<ol>
+<li>I alias <code>git status -sb</code> to <code>g</code> so I can quickly check git status. This is my
+most frequently typed command so it makes sense to make it easy.</li>
+<li>Like many others, I use a customised version of <code>git log</code> that lists one
+commit per line, but annotated with other useful information such as which
+commits other branches point to. See the definition of <code>git hist</code> below.</li>
+</ol>
+<p>Selected aliases from <code>~/.gitconfig</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#66d9ef">[alias]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">hist</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">log --color --pretty=format:\"%C(yellow)%h%C(reset) %s%C(bold red)%d%C(reset) %C(green)%ad%C(reset) %C(blue)[%an]%C(reset)\" --relative-date --decorate
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    unstage = reset HEAD --
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    restore = checkout --
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    cn = commit --no-verify
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    co = checkout
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    praise = blame
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    visualise = !gitk
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    graph = log --color --graph --pretty=format:\"%h | %ad | %an | %s%d\" --date=short</span>
+</span></span></code></pre></div><p>And from <code>~/.bash_aliases</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>alias git<span style="color:#f92672">=</span><span style="color:#e6db74">'hub'</span>
+</span></span><span style="display:flex;"><span>alias g<span style="color:#f92672">=</span><span style="color:#e6db74">'git status -sb'</span>
+</span></span><span style="display:flex;"><span>alias gh<span style="color:#f92672">=</span><span style="color:#e6db74">'git hist'</span>
+</span></span><span style="display:flex;"><span>alias gp<span style="color:#f92672">=</span><span style="color:#e6db74">'git pull'</span>
+</span></span><span style="display:flex;"><span>alias gpr<span style="color:#f92672">=</span><span style="color:#e6db74">'git pull --rebase'</span>
+</span></span><span style="display:flex;"><span>alias gpp<span style="color:#f92672">=</span><span style="color:#e6db74">'git pull --rebase &amp;&amp; git push'</span>
+</span></span><span style="display:flex;"><span>alias gf<span style="color:#f92672">=</span><span style="color:#e6db74">'git fetch'</span>
+</span></span><span style="display:flex;"><span>alias gb<span style="color:#f92672">=</span><span style="color:#e6db74">'git branch'</span>
+</span></span><span style="display:flex;"><span>alias ga<span style="color:#f92672">=</span><span style="color:#e6db74">'git add'</span>
+</span></span><span style="display:flex;"><span>alias gc<span style="color:#f92672">=</span><span style="color:#e6db74">'git commit'</span>
+</span></span><span style="display:flex;"><span>alias gca<span style="color:#f92672">=</span><span style="color:#e6db74">'git commit --amend'</span>
+</span></span><span style="display:flex;"><span>alias gcv<span style="color:#f92672">=</span><span style="color:#e6db74">'git commit --no-verify'</span>
+</span></span><span style="display:flex;"><span>alias gd<span style="color:#f92672">=</span><span style="color:#e6db74">'git diff --color-words'</span>
+</span></span><span style="display:flex;"><span>alias gdc<span style="color:#f92672">=</span><span style="color:#e6db74">'git diff --cached -w'</span>
+</span></span><span style="display:flex;"><span>alias gdw<span style="color:#f92672">=</span><span style="color:#e6db74">'git diff --no-ext-diff --word-diff'</span>
+</span></span><span style="display:flex;"><span>alias gdv<span style="color:#f92672">=</span><span style="color:#e6db74">'git diff'</span>
+</span></span><span style="display:flex;"><span>alias gl<span style="color:#f92672">=</span><span style="color:#e6db74">'git log --oneline --decorate'</span>
+</span></span><span style="display:flex;"><span>alias gt<span style="color:#f92672">=</span><span style="color:#e6db74">'git tag'</span>
+</span></span><span style="display:flex;"><span>alias grc<span style="color:#f92672">=</span><span style="color:#e6db74">'git rebase --continue'</span>
+</span></span><span style="display:flex;"><span>alias grs<span style="color:#f92672">=</span><span style="color:#e6db74">'git rebase --skip'</span>
+</span></span><span style="display:flex;"><span>alias gsl<span style="color:#f92672">=</span><span style="color:#e6db74">'git stash list'</span>
+</span></span><span style="display:flex;"><span>alias gss<span style="color:#f92672">=</span><span style="color:#e6db74">'git stash save'</span>
+</span></span></code></pre></div>
+        </div>
+
+        <div id="article_meta">
+            <span class="hr">——————</span>
+            <p>
+            Something wrong? 
+            <a href="https://github.com/codeinthehole/codeinthehole.hugo/edit/master/content/tips/git-tips.md">Suggest an improvement</a>
+            or 
+            <a href="https://github.com/codeinthehole/codeinthehole.hugo/issues/new?title=Comment%20on%20%22Effective%20pull%20requests%20and%20other%20good%20practices%20for%20teams%20using%20github%22&amp;body=Article:%20Effective%20pull%20requests%20and%20other%20good%20practices%20for%20teams%20using%20github%0AURL:%20https%3a%2f%2fcodeinthehole.com%2ftips%2fpull-requests-and-other-good-practices-for-teams-using-github%2f">add a comment</a>
+            (see <a href="https://github.com/codeinthehole/codeinthehole.hugo/commits/master/content/tips/git-tips.md">article history</a>)<br>
+
+            
+                Tagged with:
+                
+                 <a href="https://codeinthehole.com/tags/git">git</a>, <a href="https://codeinthehole.com/tags/commandlinefu">commandlinefu</a>
+                <br>
+            
+            
+                Filed in: <a href="https://codeinthehole.com/tips/">tips</a>
+            
+            </p>
+
+            <p>
+            
+                Previous: <a href="https://codeinthehole.com/tips/how-to-chroot-a-user-in-ubuntu-1204/">How to chroot a user in Ubuntu 12.04</a><br>
+            
+            
+                Next: <a href="https://codeinthehole.com/tidbits/mathematics-and-engineering/">Mathematics and engineering</a>
+            
+            </p>
+
+            <p>
+            Copyright © 2005-2023 <a href="https://codeinthehole.com/about/">David Winterbottom</a><br>
+            Content licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<script src="Effective%20pull%20requests%20and%20other%20good%20practices%20for%20teams%20using%20github%20%E2%80%94%20David%20Winterbottom_files/mousetrap.min.js"></script>
+<script>
+    
+        Mousetrap.bind("left", function() { window.location.replace("\/tips\/how-to-chroot-a-user-in-ubuntu-1204\/"); })
+    
+
+    
+        Mousetrap.bind("right", function() { window.location.replace("\/tidbits\/mathematics-and-engineering\/"); })
+    
+</script>
+
+        </article>
+    
+
+    
+    <script type="text/javascript" src="Effective%20pull%20requests%20and%20other%20good%20practices%20for%20teams%20using%20github%20%E2%80%94%20David%20Winterbottom_files/anchor.js"></script>
+    <script type="text/javascript">
+        if (document.querySelectorAll('#article_content').length) {
+            anchors.add('h2,h3,h4');
+        }
+    </script>
+
+
+
+</body></html>

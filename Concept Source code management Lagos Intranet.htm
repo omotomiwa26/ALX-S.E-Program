@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="google" content="notranslate">
+
+      <script type="text/javascript" async="" src="Concept%20Source%20code%20management%20Lagos%20Intranet_files/js"></script><script async="" src="Concept%20Source%20code%20management%20Lagos%20Intranet_files/gtm.js"></script><script>
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({"userId":258926,"visitorType":"student","batch":{"id":65,"fullNameWithC":"LOS-0123 (C#12)","schoolLocation":{"id":3,"name":"Lagos"}},"curriculum":{"id":1,"name":"Foundations"}});
+
+    window.gtm_user_custom_event = function (name, options) {
+      if (typeof name === 'undefined') {
+        return;
+      }
+
+      window.dataLayer.push({
+        customEventOptions: typeof options !== 'undefined' ? options : {},
+        event: name,
+      });
+    }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N4C8MF2');</script>
+  <!-- End Google Tag Manager -->
+
+
+    <title>Concept: Source code management | Lagos Intranet</title>
+
+      <link rel="stylesheet" href="Concept%20Source%20code%20management%20Lagos%20Intranet_files/xgz4ilr.css">
+      <link rel="stylesheet" media="all" href="Concept%20Source%20code%20management%20Lagos%20Intranet_files/application_alx-e8838960a431efe7da7f5c95f98f095fea27669b6c60.css">
+      <script src="Concept%20Source%20code%20management%20Lagos%20Intranet_files/loader.js"></script>
+      <script src="Concept%20Source%20code%20management%20Lagos%20Intranet_files/application-d6aae7f7853f92b7c29b12f8d839da6ba98c61e2d3a4c5d3d.js"></script>
+      <link rel="shortcut icon" type="image/x-icon" href="https://intranet.alxswe.com/favicon_alx.ico">
+      <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="xa2ufhdBejpvdF8p5fXd-6WjAbwTZpscOSZGoiFb1bBKRYOurJJcNtb_wVHUfSSdaP0OV2hnw38taJP-tMf4cQ">
+
+      <link rel="apple-touch-icon" href="https://intranet.alxswe.com/apple-touch-icon_alx.png">
+
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <!-- Store user timezone -->
+      <script>
+        Cookies.set('timezone', (new Date()).getTimezoneOffset() / -60.0);
+      </script>
+
+      <!-- intro.js for interactive onboarding -->
+
+      <!-- React -->
+      <script src="Concept%20Source%20code%20management%20Lagos%20Intranet_files/application-f96fd86efca75a5a2930.js"></script>
+      <link rel="stylesheet" media="screen" href="Concept%20Source%20code%20management%20Lagos%20Intranet_files/application-87456da7.css">
+  </head>
+
+  <body class="signed_in env_production notranslate" translate="no" data-theme-suffix="_alx">
+      <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4C8MF2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+      <input type="hidden" id="hbtn-slack-url" value="https://alx-students.slack.com">
+      <nav class="navbar navbar-default navbar-fixed-top topbar visible-xs">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-mobile" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <a class="navbar-brand" href="https://intranet.alxswe.com/">
+      <div class="logo"></div>
+</a>  </div>
+
+  <div class="collapse navbar-collapse navigation" id="navbar-mobile">
+    <ul class="nav navbar-nav">
+      
+
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Planning"><a href="https://intranet.alxswe.com/planning/me"><div class="icon "><i aria-hidden="true" class="fa fa-calendar "></i></div><div class="visible-xs">My Planning</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-current-projects-item" title="" data-original-title="Projects"><a href="https://intranet.alxswe.com/projects/current"><div class="icon "><i aria-hidden="true" class="fa fa-code-fork "></i></div><div class="visible-xs">Projects</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="QA Reviews I can make"><a href="https://intranet.alxswe.com/corrections/to_review"><div class="icon "><i aria-hidden="true" class="fa fa-check "></i></div><div class="visible-xs">QA Reviews I can make</div></a></li>
+    
+    
+
+    <hr title="My resources">
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Curriculums"><a href="https://intranet.alxswe.com/dashboards/my_curriculums"><div class="icon "><i aria-hidden="true" class="fa fa-graduation-cap "></i></div><div class="visible-xs">Curriculums</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-concepts-item" title="" data-original-title="Concepts"><a href="https://intranet.alxswe.com/concepts"><div class="icon "><i aria-hidden="true" class="fa fa-file-text "></i></div><div class="visible-xs">Concepts</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-video-rooms" title="" data-original-title="Conference rooms"><a href="https://intranet.alxswe.com/dashboards/video_rooms"><div class="icon "><i aria-hidden="true" class="fa fa-comments "></i></div><div class="visible-xs">Conference rooms</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Servers"><a href="https://intranet.alxswe.com/servers"><div class="icon "><i aria-hidden="true" class="fa fa-server "></i></div><div class="visible-xs">Servers</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-my-containers" title="" data-original-title="Sandboxes"><a href="https://intranet.alxswe.com/user_containers/current"><div class="icon "><i aria-hidden="true" class="fa fa-terminal "></i></div><div class="visible-xs">Sandboxes</div></a></li>
+    
+    
+
+      <hr title="My campus">
+
+      
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Peers"><a href="https://intranet.alxswe.com/users/peers"><div class="icon "><i aria-hidden="true" class="fa fa-users "></i></div><div class="visible-xs">Peers</div></a></li>
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Captain's Logs"><a href="https://intranet.alxswe.com/dashboards/my_captain_log"><div class="icon "><i aria-hidden="true" class="fa fa-book "></i></div><div class="visible-xs">Captain's Logs</div></a></li>
+
+
+<hr class="visible-xs">
+
+<li>
+    <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Slack">
+      <a target="_blank" href="https://alx-students.slack.com/">
+        <div class="image slack">
+          <div class="inner"></div>
+        </div>
+        <div class="visible-xs">Slack</div>
+</a>    </div>
+
+  <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile">
+    <a href="https://intranet.alxswe.com/users/my_profile">
+        <div class="image ">
+          <div class="inner" style="background-image: url('https://s3.amazonaws.com/alx-intranet.hbtn.io/users/photos/000/258/926/thumb/funny_programming_quote_mug-rf9a202676def441f872a8cff1b11f27d_x7jgr_8byvr_324.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230207%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230207T103350Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=da62f59c64b29d056ea2c67a9a59fe9570f17a7e059c6d2f1f61de5621220ce1')"></div>
+        </div>
+
+      <div class="visible-xs">My Profile</div>
+</a>  </div>
+</li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      <div class="hidden-xs navigation sidebar">
+  <a class="logo-container" href="https://intranet.alxswe.com/">
+    <div class="logo"></div>
+</a>
+  <ul>
+    
+
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Planning"><a href="https://intranet.alxswe.com/planning/me"><div class="icon "><i aria-hidden="true" class="fa fa-calendar "></i></div><div class="visible-xs">My Planning</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-current-projects-item" title="" data-original-title="Projects"><a href="https://intranet.alxswe.com/projects/current"><div class="icon "><i aria-hidden="true" class="fa fa-code-fork "></i></div><div class="visible-xs">Projects</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="QA Reviews I can make"><a href="https://intranet.alxswe.com/corrections/to_review"><div class="icon "><i aria-hidden="true" class="fa fa-check "></i></div><div class="visible-xs">QA Reviews I can make</div></a></li>
+    
+    
+
+    <hr title="My resources">
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Curriculums"><a href="https://intranet.alxswe.com/dashboards/my_curriculums"><div class="icon "><i aria-hidden="true" class="fa fa-graduation-cap "></i></div><div class="visible-xs">Curriculums</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-concepts-item" title="" data-original-title="Concepts"><a href="https://intranet.alxswe.com/concepts"><div class="icon "><i aria-hidden="true" class="fa fa-file-text "></i></div><div class="visible-xs">Concepts</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-video-rooms" title="" data-original-title="Conference rooms"><a href="https://intranet.alxswe.com/dashboards/video_rooms"><div class="icon "><i aria-hidden="true" class="fa fa-comments "></i></div><div class="visible-xs">Conference rooms</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Servers"><a href="https://intranet.alxswe.com/servers"><div class="icon "><i aria-hidden="true" class="fa fa-server "></i></div><div class="visible-xs">Servers</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-my-containers" title="" data-original-title="Sandboxes"><a href="https://intranet.alxswe.com/user_containers/current"><div class="icon "><i aria-hidden="true" class="fa fa-terminal "></i></div><div class="visible-xs">Sandboxes</div></a></li>
+    
+    
+
+      <hr title="My campus">
+
+      
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Peers"><a href="https://intranet.alxswe.com/users/peers"><div class="icon "><i aria-hidden="true" class="fa fa-users "></i></div><div class="visible-xs">Peers</div></a></li>
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Captain's Logs"><a href="https://intranet.alxswe.com/dashboards/my_captain_log"><div class="icon "><i aria-hidden="true" class="fa fa-book "></i></div><div class="visible-xs">Captain's Logs</div></a></li>
+
+
+<hr class="visible-xs">
+
+<li>
+    <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Slack">
+      <a target="_blank" href="https://alx-students.slack.com/">
+        <div class="image slack">
+          <div class="inner"></div>
+        </div>
+        <div class="visible-xs">Slack</div>
+</a>    </div>
+
+  <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile">
+    <a href="https://intranet.alxswe.com/users/my_profile">
+        <div class="image ">
+          <div class="inner" style="background-image: url('https://s3.amazonaws.com/alx-intranet.hbtn.io/users/photos/000/258/926/thumb/funny_programming_quote_mug-rf9a202676def441f872a8cff1b11f27d_x7jgr_8byvr_324.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230207%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230207T103350Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=da62f59c64b29d056ea2c67a9a59fe9570f17a7e059c6d2f1f61de5621220ce1')"></div>
+        </div>
+
+      <div class="visible-xs">My Profile</div>
+</a>  </div>
+</li>
+
+
+  </ul>
+</div>
+
+
+    <main>
+        <div id="layout-bars">
+          
+          
+          
+          
+          
+        </div>
+
+      <article class="">
+
+        
+<h1 class="d-flex flex-column gap-2">
+  <span>Source code management</span>
+</h1>
+
+<div>
+  
+</div>
+
+<div class="gap formatted-content">
+    <h2>What is source code management?</h2>
+
+<p>It allows a developer to organize code iterations chronologically, 
+and version it for an application. The most powerful features of source 
+code management systems are in how they allow teams of very diverse 
+sizes to work together on the same application simultaneously.  </p>
+
+<p>Some terms that are common to all of them:  </p>
+
+<ul>
+<li>A project will be called <strong>repository</strong>, it’s representing the index/the filesystem root of your project.</li>
+<li>Developers might create <strong>branches</strong> of the codebase, 
+that they will iterate on separately to other developers. For instance, a
+ branch can be meant to be used for a given feature, or a given bug fix.
+ One can create however many branches they need.</li>
+<li>Once a branch is ready for it (it’s been tested, peer-reviewed, etc.), it can be <strong>merged</strong>   back to the main branch. The main branch may be called differently: in Git it’s called <strong>master</strong> , in SVN it’s called <strong>trunk</strong>.</li>
+<li>While coding on their branch, developers are meant to work in small, atomic iterations, called <strong>commits</strong>. All commits have a commit message describing in one sentence what’s in there.</li>
+<li>All commits together are called the <strong>history</strong> , and 
+it’s a big deal to write meaningful commits and commit messages in order
+ to keep the project’s history clean at a glance, to understand what has
+ been going on and who did what.</li>
+<li>Some people might be modifying the same pieces on the codebase on different branches, and this could create <strong>conflicts</strong>
+ when one merges those branches together. Some of those conflicts can 
+obviously only be fixed by a human, and each system has a different way 
+to manage merge conflicts.</li>
+</ul>
+
+<h2>Which systems exist?</h2>
+
+<p>I’ll put each specific wording between quotes. The same words may be used for differing notions across the various products.  </p>
+
+<p><strong>SourceSafe</strong> was an early source code management 
+system from Microsoft, which didn’t handle branches, merges, or 
+conflicts. You could “check out” a file, which meant no one else was 
+allowed to “check it out” and modify it at the same time. When you were 
+done with it, you could “check in” the file, making it editable again to
+ the others. Not very suitable for large teams that may work on the same
+ file, and longer iterations in a given file. SourceSafe is discontinued
+ today.  </p>
+
+<p><strong>CVS</strong> was among the first open-source source code 
+management systems in the industry, and used to be wildly popular, but 
+is barely seen anymore. It didn’t handle branches, but two people could 
+modify the same file at the same time. People would “update” their whole
+ directory to get everybody else’s work before starting, and “commit” 
+their code to the server when they’re done. When they would “commit” a 
+file that had been “committed” by someone else since last time they 
+“updated”, the system was not able to merge, so it would consider it a 
+conflict every time, that you would have to manually fix (even if the 
+changes were not on the same lines, for instance).  </p>
+
+<p><strong>SVN</strong> was built upon CVS to handle branches, so a lot 
+of terminology is the same. At some point, it was the most used system, 
+and it is still seen in the industry, even though people are walking 
+away from it. When you’d create a branch, it would actually copy-paste 
+the whole codebase into another directory in the code repository; then, 
+you’d try to merge, and it would massively compare each file one by one.
+ Merging algorithms were smarter than the CVS ones, but you still had 
+conflicts on most merges, even those that shouldn’t necessarily require a
+ human. When you’d create a “tag” (which is a set version of your code, 
+like “1.2.0”), then the whole codebase would simply be massively 
+copy-pasted into another directory too, but without the intention to 
+merge it back later.  </p>
+
+<p><strong>Git</strong> doesn’t copy-paste the whole codebase when 
+branching and tagging, but stores each commit as a code iteration, in an
+ organized structure that resembles a tree. This allows it to have a 
+much smarter merging algorithm, and it almost never bothers you with 
+conflicts, except for those that really need a human decision. As a 
+result, the cost of branching/merging is very low, and people typically 
+branch/merge a lot, therefore one should never directly work on the 
+“master” branch, if they’re not the only developer on the project. Also:
+ unlike its predecessors, Git allows to work and commit without needing 
+to talk with a server, which allows to work on planes, for instance; and
+ it also can work as a decentralized (peer-to-peer) system, although 
+it’s very rarely done that way.  </p>
+
+<p><strong>Mercurial</strong> is very similar to Git in its concepts 
+(although the syntax of its command-line tool is often different). It is
+ more rarely seen in the industry than Git, but is still very relevant. 
+It is the one used by Facebook, for instance, for its main application. 
+ </p>
+
+<h2>The lowdown on Git</h2>
+
+<p><img src="Concept%20Source%20code%20management%20Lagos%20Intranet_files/337918ed8390e09823254769b981fd80f883ca33.jpg" alt="" loading="lazy" style=""></p>
+
+<p>A particularity about Git, is that it’s designed to be useable without a central repository (you can <strong>pull</strong> code from your friend’s computer, and <strong>push</strong>
+ you work back there, for instance), but not many people use it that 
+way. There is usually a central Git server that the whole team <strong>pushes</strong> code to and <strong>pulls</strong> code from; however, that explains why it is often referred as a “decentralized” system.  </p>
+
+<p>So that you can work without a server, the <strong>commit</strong> 
+operation is local, no one other than your computer knows you committed 
+something. You can make several commits however you want, but when you 
+want the server to know about it, you must <strong>push</strong> them there.<br>
+You want to be <strong>pulling</strong> from the repository often if other people may be working on the same branch as you, because each <strong>pull</strong>
+ performs a merge operation between the code you didn’t have, and the 
+code you recently committed locally. Therefore, in order to let you <strong>push</strong> , Git will sometimes demand that you <strong>pull</strong> first, so that the <strong>merge</strong> can be done on your computer, and you take care of potential <strong>conflicts</strong>.  </p>
+
+<p>Sometimes, you may have modified 3 files, but there are only two that you wish to include in the <strong>commit</strong> you’re about the make. Therefore, Git has a notion of “ <strong>index</strong>”, in which you <strong>add</strong> your modified files so that they’re included in the next <strong>commit</strong> you register.  </p>
+
+<p>How to configure the remote servers your local repository is talking to? They’re called <strong>remotes</strong> , and you can configure however many you need. The main one is typically named <strong>origin</strong>   (that’s the name that is setup by default when you <strong>clone</strong> a project from a remote location in the first place). You can also configure however many <strong>branches</strong> you need, and name them as you please, and the default one is usually called <strong>master</strong>.  </p>
+
+<p>Some UI tools for Git exist, but Git is able to do so many things, 
+that they don’t represent the magnitude of cases for which you need Git.
+ You really want to learn to use it with the command line. Here are some
+ commands:  </p>
+
+<pre><code>$ git clone url_of_your_remote_repository   # Clone a repository from a remote repository  
+$ git add file1 file2    # will add those two files to the index if they were modified  
+$ git commit -m "Meaningful commit message"   # will commit those two files (locally)  
+$ git add .   # will add all of the modified files to the index at once  
+$ git commit -m "Other meaningful commit message"   # will commit all of those files together  
+$ git push origin master   # send all commit to the remote server
+</code></pre>
+
+<p>Now, let’d do this again, but by on a branch:</p>
+
+<pre><code>$ git branch my_feature   # Creating the branch  
+$ git checkout my_feature   # Changing the codebase so that we're on that branch now  
+$ git checkout -b my_feature   # This does the two previous operations in one ;)  
+$ git add file1 file2  
+$ git commit -m "Meaningful commit message"   # We didn't just commit this on the master branch like last time, but on the my_feature one  
+$ git add .  
+$ git commit -m "Other meaningful commit message"  
+$ git push origin my_feature   # Notice: we're not pushing master anymore, you just create a new remote branch
+</code></pre>
+
+<p>Next time you want to work on that branch, you should probably do this first:</p>
+
+<pre><code>$ git checkout my_feature   # Just making sure you're currently on the right branch!  
+$ git pull origin my_feature   # Pulling what your coworkers have done so far.  
+</code></pre>
+
+<p>And when you’re done with the whole feature and want to merge it to master:</p>
+
+<pre><code>$ git checkout master  
+$ git merge my_feature  
+</code></pre>
+
+<p>One other pretty neat thing: if you have a non-Git directory in your 
+computer, and you want to turn it into a Git repository, it’s that easy:</p>
+
+<pre><code>$ git init   # You're done!  
+$ git remote add origin url_of_your_git_server   # So that you can push your code somewhere.  
+</code></pre>
+
+<p>When you’re in a Git repository, and want to know which files are 
+modified but not in the index, and those that are modified and are in 
+the index, you can run:</p>
+
+<pre><code>$ git status  
+</code></pre>
+
+<p>Git provides many more abilities, such as rewriting pieces of the <strong>history</strong> of the project if you feel the <strong>commits</strong> were not meaningful enough, displaying the <strong>history</strong> in visually meaningful ways, …  </p>
+
+<p>For instance, you should run this right now, and see how a complex history can be viewed really nicely:  </p>
+
+<pre><code>$ git clone [https://github.com/loverajoel/jstips.git](https://github.com/loverajoel/jstips.git)   # You will need a GitHub account for this to work  
+$ cd jstips   # changing your directory into the one you just downloaded  
+$ git log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative  
+</code></pre>
+
+<p>Cool, right?  </p>
+
+<h2>What is the difference between Git and GitHub?</h2>
+
+<p>Git is everything we’ve covered so far: a source code management tool, that comes with a command-line tool for its users.  </p>
+
+<p>GitHub is one of many services that provide at the same time:  </p>
+
+<ul>
+<li>a Git repository server to push your code to </li>
+<li>a web UI to that view your repositories, with their files and commits</li>
+<li><p>a number of extra features (managing your team and accesses, …)
+Two GitHub features you have to get familiarized with are:  </p></li>
+<li><p><strong>Forks</strong> : you can <strong>fork</strong>   any repository on GitHub, and it will duplicate the repository’s codebase into repository that you own. For instance, if you <strong>fork</strong>
+ twbs/bootstrap, and your GitHub username is “my_username”, then it will
+ create the my_username/bootstrap repository, and it will remember where
+ it was forked from. Usually, you aren’t allowed to <strong>push</strong>   on other people’s repositories, so that will give you a repository that you can push to, since you own it.  </p></li>
+<li><p><strong>Pull requests:</strong>   once you’ve pushed your code to
+ your repository (or sometimes to a branch of the main repository, if 
+you’re allowed), then you can create a <strong>pull request</strong>   towards the main repository’s <strong>master branch</strong>.
+ Somebody in charge of the main repository will review your pull request
+ (potentially asking you to change a couple of things), and <strong>merge</strong>   it if it’s suitable to be in the main product.  </p></li>
+</ul>
+
+<p>GitHub has many competitors, two of the main ones being GitLab and 
+BitBucket (which provide very similar services). We chose to make you 
+use GitHub because that’s where most of the industry is (that way, 
+you’ll be able to interact with them on their open-source projects), and
+ it’s also where tech recruiters typically go check out to see what 
+you’ve been up to.</p>
+
+<h2>Some interesting links about Git</h2>
+
+<ul>
+<li><a href="https://intranet.alxswe.com/rltoken/Yo5sfG-qfPTQ5wkJ3mh4TA" title="https://try.github.io" target="_blank">https://try.github.io</a>: an interactive tutorial for beginners.<br></li>
+<li><a href="https://intranet.alxswe.com/rltoken/qaMLmt-Ly9w4b63v68I94g" title="https://help.github.com/articles/good-resources-for-learning-git-and-github/" target="_blank">https://help.github.com/articles/good-resources-for-learning-git-and-github/</a>: a list of resources about Git, curated by GitHub.<br></li>
+<li><a href="https://intranet.alxswe.com/rltoken/Xv4OUmdgaAqZc6xNIbj5Qw" title="http://nvie.com/posts/a-successful-git-branching-model/" target="_blank">http://nvie.com/posts/a-successful-git-branching-model/</a>:
+ once you master the technical tool, you have many ways to organize your
+ branches according to your project. This very notorious article from 
+2010 introduces <strong>git-flow</strong> , a detailed  proposal for 
+organizing collective work with Git that is still the most common today.
+ You should talk about that each time you start a collaborative project 
+using Git.<br></li>
+<li><a href="https://intranet.alxswe.com/rltoken/oxqz34z-08QZECcmpR9JdQ" title="http://semver.org" target="_blank">http://semver.org</a>:
+ now  that you  can give  version numbers  to  your  code  iterations,  
+how  should  you  number them?  Semantic  versioning is  the  most  used
+  versioning  scheme.<br></li>
+<li><a href="https://intranet.alxswe.com/rltoken/AGmLa9Evzc9MI8dP9SFOcQ" title="Git from the inside out" target="_blank">Git from the inside out</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/OAvUt-4nF_R3xb_cC20fqw" title="Learn git branching" target="_blank">Learn git branching</a></li>
+</ul>
+
+<p><strong>All of your school projects must make proper use of Git, and must be pushed to your GitHub account.</strong></p>
+
+</div>
+
+
+      </article>
+
+      <div class="copyright">Copyright © 2023 ALX, All rights reserved.</div>
+
+    </main>
+
+        <button class="btn btn-primary" id="search-button" data-search-active="false" data-toggle="modal" data-target="#search-modal">
+  <i aria-hidden="true" class="fa fa-search "></i>
+  <i aria-hidden="true" class="fa fa-window-minimize "></i>
+</button>
+
+        <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-labelledby="search-modal-label">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div id="search-bar-container">
+    <input id="search-bar" type="text" name="hbtn-search-bar" placeholder="✨Start search by typing in this field✨">
+</div>
+
+            </div>
+            <div class="modal-body">
+                <div id="modal-spinner" class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div id="search-results-container">
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="modal fade" id="markdownGuideModal" tabindex="-1" role="dialog" aria-labelledby="markdownGuideModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title">Markdown Guide</h4>
+        </div>
+        <div class="modal-body">
+            <h4>Emphasis</h4>
+<pre>**<strong>bold</strong>**
+*<em>italics</em>*
+~~<strike>strikethrough</strike>~~</pre>
+<h4>Headers</h4>
+<pre># Big header
+## Medium header
+### Small header
+#### Tiny header</pre>
+<h4>Lists</h4>
+<pre>* Generic list item
+* Generic list item
+* Generic list item
+
+1. Numbered list item
+2. Numbered list item
+3. Numbered list item</pre>
+<h4>Links</h4>
+<pre>[Text to display](http://www.example.com)</pre>
+<h4>Quotes</h4>
+<pre>&gt; This is a quote.
+&gt; It can span multiple lines!</pre>
+<h4>Images</h4>
+<p>CSS style available: <code>width, height, opacity</code></p>
+<pre>![](http://www.example.com/image.jpg)
+![](http://www.example.com/image.jpg | width: 200px)
+![](http://www.example.com/image.jpg | height: 124px | width: 80px | opacity: 0.6)
+</pre>
+<h4>Tables</h4>
+<pre>| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John     | Doe      | Male     |
+| Mary     | Smith    | Female   |
+
+<em>Or without aligning the columns...</em>
+
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John | Doe | Male |
+| Mary | Smith | Female |
+</pre>
+<h4>Displaying code</h4>
+<pre>`var example = "hello!";`
+
+<em>Or spanning multiple lines...</em>
+
+```
+var example = "hello!";
+alert(example);
+```</pre>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+</body></html>
